@@ -33,7 +33,7 @@
 | `api-v1-user-walletSummary.all.csv` | `/api/v1/user/walletSummary?currency=all` | BitMEX-generated summary cross-check |
 | `api-v1-instrument.all.csv` | `/api/v1/instrument` | instrument dictionary and contract spec reference |
 | `api-v1-wallet-assets.csv` | `/api/v1/wallet/assets` | asset scale and wallet metadata reference |
-| `derived-equity-curve.csv` | derived | XBT-denominated cumulative wealth curve used for the chart |
+| `derived-equity-curve.csv` | derived | XBT-equivalent wallet curve across XBT and USDt balances used for the chart |
 | `cumulative-performance.png` | derived | README performance figure |
 | `manifest.json` | derived | checksums, row counts, time ranges, and build metadata |
 
@@ -46,8 +46,8 @@
 - 曲线基准点：**1.83953943 XBT**，时间 **2020-05-01T14:39:40.387Z**
 - XBT 钱包账本里累计完成入金：**1.77199051 XBT**
 - XBT 钱包账本里累计完成出金：**66.00180000 XBT**
-- 最新调整后钱包财富：**96.41664194 XBT**（相对基准 **52.413468x**）
-- 最新调整后按保证金计价财富：**95.78293937 XBT**（相对基准 **52.068979x**）
+- 最新调整后钱包等值财富（XBT+USDt 范围）：**96.38685218 XBT**（相对基准 **52.397274x**）
+- 最新调整后按保证金计价财富（XBT+USDt 范围）：**95.75314961 XBT**（相对基准 **52.052785x**）
 
 ## 这些文件应该怎么理解
 
@@ -68,15 +68,16 @@
 
 ## 派生收益曲线的方法
 
-`derived-equity-curve.csv` 刻意做得简单且保守：
+`derived-equity-curve.csv` 刻意做得简单、可审计：
 
-1. 只使用 **XBT 计价的钱包账本**。
+1. 它跟踪的是 **XBT + USDt 两个钱包合并后的 XBT 等值财富**。
 2. 基准点定义为：首个交易日里，最后一次完成入金之后的第一笔完整 XBT 钱包余额。
-3. 从这个基准点开始，**完成出金会加回去**，**完成入金会扣掉**。
-4. `Transfer` 按内部划转处理，不算外部现金流。
-5. 所以这条曲线是一个方便公众阅读的 **XBT 财富曲线**，**不是** 每个时刻、跨所有非 XBT 钱包的完整历史逐时盯市净值。
+3. 从这个基准点开始，**完成出金会加回去**，**完成入金会扣掉**，并且会把内部 `Transfer` 行中和掉。
+4. `Conversion` 以及 XBT/USDt 的 `SpotTrade` 成对记录按**内部换仓**处理，不视为财富损失。
+5. USDt 余额会按公开钱包账本里最近一次观察到的内部 XBT/USDT 转换或现货成交汇率折回 XBT。
+6. 所以这条曲线是一个方便公众阅读的 **XBT 等值财富曲线**，**不是** 覆盖所有非 XBT 钱包、所有资产、所有时刻的完整逐时盯市净值。
 
-这样做的好处是：方法足够透明，而且可以直接由仓库里公开的文件自行复核。
+这样做的好处是：方法足够透明，而且能避免账户在 XBT 和 USDt 之间临时切换时出现假的断崖。
 
 ## 明确不放进这个仓库的内容
 

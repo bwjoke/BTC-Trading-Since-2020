@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T19:15:11Z",
+  "generated_at": "2026-04-17T20:07:16Z",
   "root": "/Users/jarvis/.hermes/analysis_outputs/btc-trading-since-2020/public-repo-root",
   "spec_version": "1.0",
   "privacy_policy_version": "0.4",
@@ -17,11 +17,11 @@
     "baseline_balance_xbt": "1.83953943",
     "completed_deposits_total_xbt": "1.77199051",
     "completed_withdrawals_total_xbt": "66.00180000",
-    "latest_adjusted_wealth_xbt": "96.41664194",
-    "latest_adjusted_wealth_multiple": "52.413468",
-    "latest_adjusted_marked_wealth_xbt": "95.78293937",
-    "latest_adjusted_marked_multiple": "52.068979",
-    "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. After baseline, completed withdrawals are added back and completed deposits are subtracted. Transfers are treated as internal, not external, flows."
+    "latest_adjusted_wealth_xbt": "96.38685218",
+    "latest_adjusted_wealth_multiple": "52.397274",
+    "latest_adjusted_marked_wealth_xbt": "95.75314961",
+    "latest_adjusted_marked_multiple": "52.052785",
+    "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. After baseline, completed withdrawals are added back, completed deposits are subtracted, and internal Transfer rows are neutralized. Wealth is measured as XBT wallet balance plus USDt wallet balance converted to XBT using the latest observed internal XBT/USDT conversion or spot rate. Conversion and SpotTrade XBT<->USDt pairs are treated as internal wallet swaps, not losses."
   },
   "files": [
     {
@@ -440,16 +440,21 @@
     {
       "file": "derived-equity-curve.csv",
       "kind": "derived_csv",
-      "role": "xbt-denominated cumulative wealth curve derived from wallet history",
-      "rows": 16747,
+      "role": "xbt-denominated wallet-equivalent wealth curve across XBT and USDt balances",
+      "rows": 17083,
       "columns": [
         "timestamp",
         "transactTime",
         "transactType",
         "transactStatus",
         "reference",
+        "eventCurrencies",
         "walletBalanceXBT",
+        "usdtWalletBalanceUSDt",
+        "xbtUsdtRate",
+        "walletBalanceXBTEquivalent",
         "marginBalanceXBT",
+        "marginBalanceXBTEquivalent",
         "cumulativeCompletedDepositsAfterBaselineXBT",
         "cumulativeCompletedWithdrawalsAfterBaselineXBT",
         "adjustedWealthXBT",
@@ -460,40 +465,40 @@
         "baselineTimestamp",
         "methodologyVersion"
       ],
-      "sha256": "1e30ca53a10dc26d5be41e94fecc88dc68d5918ff88318d214d9e977d9a449de",
-      "size_bytes": 3757804,
+      "sha256": "a03ce8893fd0200bd87a5f31791c809c74715212412b646d1f89b9e7ff4c27bf",
+      "size_bytes": 4094298,
       "first_time": "2020-05-01T14:39:40.387Z",
       "last_time": "2026-04-17T12:14:50.533Z",
       "baseline_timestamp": "2020-05-01T14:39:40.387Z",
       "baseline_balance_xbt": "1.83953943",
       "completed_deposits_total_xbt": "1.77199051",
       "completed_withdrawals_total_xbt": "66.00180000",
-      "latest_adjusted_wealth_xbt": "96.41664194",
-      "latest_adjusted_wealth_multiple": "52.413468",
-      "latest_adjusted_marked_wealth_xbt": "95.78293937",
-      "latest_adjusted_marked_multiple": "52.068979",
-      "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. After baseline, completed withdrawals are added back and completed deposits are subtracted. Transfers are treated as internal, not external, flows."
+      "latest_adjusted_wealth_xbt": "96.38685218",
+      "latest_adjusted_wealth_multiple": "52.397274",
+      "latest_adjusted_marked_wealth_xbt": "95.75314961",
+      "latest_adjusted_marked_multiple": "52.052785",
+      "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. After baseline, completed withdrawals are added back, completed deposits are subtracted, and internal Transfer rows are neutralized. Wealth is measured as XBT wallet balance plus USDt wallet balance converted to XBT using the latest observed internal XBT/USDT conversion or spot rate. Conversion and SpotTrade XBT<->USDt pairs are treated as internal wallet swaps, not losses."
     },
     {
       "file": "cumulative-performance.png",
       "kind": "derived_asset",
       "role": "readme performance figure derived from derived-equity-curve.csv",
-      "sha256": "a5469d5c068187a8a7efd35f6166aaf658352a9798680c991efc8d52cd60ea2a",
-      "size_bytes": 140668
+      "sha256": "7f8830f792ab1e4be73fcb845d14ff459610c464d6a4c50c4b5f2a3d47038286",
+      "size_bytes": 141475
     },
     {
       "file": "README.md",
       "kind": "documentation",
       "role": "repository readme",
-      "sha256": "feab95e1f8b5b8d3385cc02a37df0aaf90b39fae94e17e3e67022e4d9c94603f",
-      "size_bytes": 5610
+      "sha256": "9a62a49d1c4aa99457bda81832b019f1776a9c02b21c161bce2eebf8a2da0e67",
+      "size_bytes": 6018
     },
     {
       "file": "README.zh-CN.md",
       "kind": "documentation",
       "role": "repository readme",
-      "sha256": "66fa55b19ecccd939ce1a873fca5782ce77fd10d513ef5146cd96c51e0309a48",
-      "size_bytes": 5470
+      "sha256": "5afe3a70176f7914cfe70f743978a82f2596e5b6fd76b3e1825113bda17c317c",
+      "size_bytes": 5826
     }
   ]
 }

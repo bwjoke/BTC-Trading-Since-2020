@@ -33,7 +33,7 @@ The core idea is simple: high-quality context compounds. If a public trading his
 | `api-v1-user-walletSummary.all.csv` | `/api/v1/user/walletSummary?currency=all` | BitMEX-generated summary cross-check |
 | `api-v1-instrument.all.csv` | `/api/v1/instrument` | instrument dictionary and contract spec reference |
 | `api-v1-wallet-assets.csv` | `/api/v1/wallet/assets` | asset scale and wallet metadata reference |
-| `derived-equity-curve.csv` | derived | XBT-denominated cumulative wealth curve used for the chart |
+| `derived-equity-curve.csv` | derived | XBT-equivalent wallet curve across XBT and USDt balances used for the chart |
 | `cumulative-performance.png` | derived | README performance figure |
 | `manifest.json` | derived | checksums, row counts, time ranges, and build metadata |
 
@@ -46,8 +46,8 @@ The core idea is simple: high-quality context compounds. If a public trading his
 - Chart baseline: **1.83953943 XBT** at **2020-05-01T14:39:40.387Z**
 - Total completed deposits in XBT ledger: **1.77199051 XBT**
 - Total completed withdrawals in XBT ledger: **66.00180000 XBT**
-- Latest adjusted wallet wealth: **96.41664194 XBT** (**52.413468x** vs baseline)
-- Latest adjusted marked wealth: **95.78293937 XBT** (**52.068979x** vs baseline)
+- Latest adjusted wallet-equivalent wealth (XBT+USDt scope): **96.38685218 XBT** (**52.397274x** vs baseline)
+- Latest adjusted marked wealth (XBT+USDt scope): **95.75314961 XBT** (**52.052785x** vs baseline)
 
 ## How to read the files
 
@@ -68,15 +68,16 @@ The core idea is simple: high-quality context compounds. If a public trading his
 
 ## Derived performance methodology
 
-`derived-equity-curve.csv` is intentionally simple and conservative:
+`derived-equity-curve.csv` is intentionally simple and auditable:
 
-1. It uses only the **XBT-denominated wallet ledger**.
+1. It tracks **wallet-equivalent wealth across XBT and USDt balances**.
 2. The baseline is the first fully-funded XBT wallet balance after the final completed deposit on the first trading day.
-3. After that baseline, **completed withdrawals are added back** and **completed deposits are subtracted**.
-4. Internal transfers are treated as internal, not external, flows.
-5. The resulting series is a clean public-friendly XBT wealth curve. It is **not** a full historical mark-to-market NAV across every non-XBT wallet at every moment.
+3. After that baseline, **completed withdrawals are added back**, **completed deposits are subtracted**, and internal `Transfer` rows are neutralized.
+4. `Conversion` and XBT/USDt `SpotTrade` pairs are treated as **internal wallet swaps**, not losses.
+5. USDt balances are converted back into XBT using the latest observed internal XBT/USDT conversion or spot rate in the published wallet ledger.
+6. The resulting series is a public-friendly XBT-equivalent wealth curve. It is **not** a full historical mark-to-market NAV across every non-XBT wallet or every asset BitMEX ever credited.
 
-This keeps the methodology auditable from the published files themselves.
+This keeps the methodology auditable from the published files themselves while avoiding false cliffs when the account temporarily rotates between XBT and USDt.
 
 ## What is intentionally not in this repo
 
