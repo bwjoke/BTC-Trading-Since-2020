@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T20:56:07Z",
+  "generated_at": "2026-04-17T21:49:10Z",
   "root": "/Users/jarvis/.hermes/analysis_outputs/btc-trading-since-2020/public-repo-root",
   "spec_version": "1.0",
   "privacy_policy_version": "0.4",
@@ -21,7 +21,7 @@
     "latest_adjusted_wealth_multiple": "52.397274",
     "latest_adjusted_marked_wealth_xbt": "95.75314961",
     "latest_adjusted_marked_multiple": "52.052785",
-    "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. After baseline, completed withdrawals are added back, completed deposits are subtracted, and internal Transfer rows are neutralized. Wealth is measured as XBT wallet balance plus USDt wallet balance converted to XBT using the latest observed internal XBT/USDT conversion or spot rate. Conversion and SpotTrade XBT<->USDt pairs are treated as internal wallet swaps, not losses."
+    "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. Wallet-history cash-flow events are applied in timestamp-first order when BitMEX exposes both timestamp and transactTime. After baseline, completed withdrawals are added back, completed deposits are subtracted, and internal Transfer rows are neutralized. Wealth is measured as XBT wallet balance plus USDt wallet balance converted to XBT using the latest observed internal XBT/USDT conversion or spot rate. Conversion and SpotTrade XBT<->USDt pairs are treated as internal wallet swaps, not losses."
   },
   "files": [
     {
@@ -465,8 +465,8 @@
         "baselineTimestamp",
         "methodologyVersion"
       ],
-      "sha256": "a03ce8893fd0200bd87a5f31791c809c74715212412b646d1f89b9e7ff4c27bf",
-      "size_bytes": 4094298,
+      "sha256": "3a899533db0c50fa219344fbdee0df8260cee2c66435d4ee27ef2a21198d5ce9",
+      "size_bytes": 4094292,
       "first_time": "2020-05-01T14:39:40.387Z",
       "last_time": "2026-04-17T12:14:50.533Z",
       "baseline_timestamp": "2020-05-01T14:39:40.387Z",
@@ -477,28 +477,28 @@
       "latest_adjusted_wealth_multiple": "52.397274",
       "latest_adjusted_marked_wealth_xbt": "95.75314961",
       "latest_adjusted_marked_multiple": "52.052785",
-      "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. After baseline, completed withdrawals are added back, completed deposits are subtracted, and internal Transfer rows are neutralized. Wealth is measured as XBT wallet balance plus USDt wallet balance converted to XBT using the latest observed internal XBT/USDT conversion or spot rate. Conversion and SpotTrade XBT<->USDt pairs are treated as internal wallet swaps, not losses."
+      "methodology": "Baseline is the first fully-funded XBT wallet balance after the last completed deposit on the first trading day. Wallet-history cash-flow events are applied in timestamp-first order when BitMEX exposes both timestamp and transactTime. After baseline, completed withdrawals are added back, completed deposits are subtracted, and internal Transfer rows are neutralized. Wealth is measured as XBT wallet balance plus USDt wallet balance converted to XBT using the latest observed internal XBT/USDT conversion or spot rate. Conversion and SpotTrade XBT<->USDt pairs are treated as internal wallet swaps, not losses."
     },
     {
       "file": "cumulative-performance.png",
       "kind": "derived_asset",
       "role": "readme performance figure derived from derived-equity-curve.csv",
-      "sha256": "7f8830f792ab1e4be73fcb845d14ff459610c464d6a4c50c4b5f2a3d47038286",
-      "size_bytes": 141475
+      "sha256": "d96e23e6bdb4068429b4a783281176efcfb7d3a07a40b309297a2d676749d1a9",
+      "size_bytes": 139656
     },
     {
       "file": "README.md",
       "kind": "documentation",
       "role": "repository readme",
-      "sha256": "a57fad3b4e8037e8d407abcb46dba77b955ee3a9e6f52297efd0badb5f8d682d",
-      "size_bytes": 6984
+      "sha256": "8e5bb656155aef403ff7a7c95f8b8559948422244f48d84a57562144e94a6077",
+      "size_bytes": 7203
     },
     {
       "file": "README.zh-CN.md",
       "kind": "documentation",
       "role": "repository readme",
-      "sha256": "a4198ab3efdaee5dfc0e8e1ea45d3296990a33d0912a8a5b80e7f937fb090f46",
-      "size_bytes": 6824
+      "sha256": "bb443ec601db58d9ed2d2678a263f0860517e8435f683d69fae814cd4341a55e",
+      "size_bytes": 7062
     }
   ]
 }

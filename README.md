@@ -90,7 +90,8 @@ This repository is the long-horizon historical layer; `wsnb.online` is the live 
 3. After that baseline, **completed withdrawals are added back**, **completed deposits are subtracted**, and internal `Transfer` rows are neutralized.
 4. `Conversion` and XBT/USDt `SpotTrade` pairs are treated as **internal wallet swaps**, not losses.
 5. USDt balances are converted back into XBT using the latest observed internal XBT/USDT conversion or spot rate in the published wallet ledger.
-6. The resulting series is a public-friendly XBT-equivalent wealth curve. It is **not** a full historical mark-to-market NAV across every non-XBT wallet or every asset BitMEX ever credited.
+6. For wallet-history-driven cash flows, event ordering uses `timestamp` when BitMEX provides it; `transactTime` is preserved as the original exchange field but is not blindly treated as the accounting-effective order.
+7. The resulting series is a public-friendly XBT-equivalent wealth curve. It is **not** a full historical mark-to-market NAV across every non-XBT wallet or every asset BitMEX ever credited.
 
 This keeps the methodology auditable from the published files themselves while avoiding false cliffs when the account temporarily rotates between XBT and USDt.
 
