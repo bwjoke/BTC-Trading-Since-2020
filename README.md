@@ -22,6 +22,11 @@ Open intelligence instead of selective narrative.
 - Latest public event/snapshot in this build: **2026-04-17T16:18:45.506Z**
 - Versioning policy: stable root filenames + daily Git commit/tag (`data-2026-04-17` is the tag format)
 
+## Download packages
+
+- If you just want a one-click download instead of cloning the full git history, use the GitHub **Releases** page.
+- Each tagged build can be attached there as `.zip` and `.tar.gz` archives containing this same flat repo root.
+
 ## What is included
 
 | File | Source endpoint | Role |

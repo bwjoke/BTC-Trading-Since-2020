@@ -22,6 +22,11 @@ Open intelligence，而不是选择性叙事。
 - 本次构建里的最新事件/快照：**2026-04-17T16:18:45.506Z**
 - 版本策略：根目录文件名稳定不变，按天用 Git commit/tag 追踪（tag 格式：`data-YYYY-MM-DD`）
 
+## 下载包
+
+- 如果你只是想一键下载，而不是 clone 整个 Git 历史，请优先使用 GitHub 的 **Releases** 页面。
+- 每个 tag 版本都可以在那边附带 `.zip` 和 `.tar.gz` 下载包，里面装的是同样这套平铺根目录文件。
+
 ## 仓库里包含什么
 
 | File | Source endpoint | Role |

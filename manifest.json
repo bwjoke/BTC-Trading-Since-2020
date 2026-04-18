@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T08:17:19Z",
+  "generated_at": "2026-04-18T08:25:38Z",
   "root": "/Users/jarvis/.hermes/analysis_outputs/btc-trading-since-2020/public-repo-root",
   "spec_version": "1.0",
   "privacy_policy_version": "0.4",
@@ -490,15 +490,15 @@
       "file": "README.md",
       "kind": "documentation",
       "role": "repository readme",
-      "sha256": "11b1573ecd0be2722c0e12595530443c3d84f410c461624b25cc426b8fed6a62",
-      "size_bytes": 7590
+      "sha256": "afe5b9e45b500a1fa4297a486c571c99b1b2908514449e595dde3c11ba90aa06",
+      "size_bytes": 7840
     },
     {
       "file": "README.zh-CN.md",
       "kind": "documentation",
       "role": "repository readme",
-      "sha256": "8a901d1ac8c2aeb5cca95843f5185b129b490179290f6ac85244d5836397bf92",
-      "size_bytes": 7376
+      "sha256": "1d93f1271ec380317b733164636f314b14c3f940a598b0467f2288f2a558a8a2",
+      "size_bytes": 7641
     }
   ]
 }
