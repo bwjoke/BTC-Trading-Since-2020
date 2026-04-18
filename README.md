@@ -8,7 +8,7 @@ The internet likely has no comparable public repository that continuously expose
 
 ![Cumulative performance](cumulative-performance.png?v=dc2dc2d11acf)
 
-BitMEX recognized Paul Wei (`@coolish`) as one of its 11th anniversary Legends and, on its public Hall of Legends page, highlighted a `70x` Bitcoin-trading return over 3 years ([source](https://www.bitmex.com/hall-of-legends)). But the deeper value of this repository is not a single headline number. It is a public, timestamped archive of long-term BTC trading through multiple market cycles — including strong calls, reversals, drawdowns, and recoveries — so readers can inspect the record in sequence rather than rely on retrospective storytelling.
+BitMEX recognized Paul Wei ([`@coolish`](https://x.com/coolish)) as one of its 11th anniversary Legends and, on its public Hall of Legends page, highlighted a `70x` Bitcoin-trading return over 3 years ([source](https://www.bitmex.com/hall-of-legends)). But the deeper value of this repository is not a single headline number. It is a public, timestamped archive of long-term BTC trading through multiple market cycles — including strong calls, reversals, drawdowns, and recoveries — so readers can inspect the record in sequence rather than rely on retrospective storytelling.
 
 Any long-term result includes timing and luck. What makes this archive unusual is that much of the trail was public before the outcome was known. That makes it a more durable record of decision-making under uncertainty, not just a curated victory lap.
 
@@ -103,6 +103,8 @@ This repository is the long-horizon historical layer; `wsnb.online` is the live 
 5. USDt balances are converted back into XBT using the latest observed internal XBT/USDT conversion or spot rate in the published wallet ledger.
 6. For wallet-history-driven cash flows, event ordering uses `timestamp` when BitMEX provides it; `transactTime` is preserved as the original exchange field but is not blindly treated as the accounting-effective order.
 7. The resulting series is a public-friendly XBT-equivalent wealth curve. It is **not** a full historical mark-to-market NAV across every non-XBT wallet or every asset BitMEX ever credited.
+
+In practice, almost all trading activity in this account was BTC-settled on BitMEX: by executed trade notional grouped by settlement currency, about 98.9% settles in XBT, while only about 1.1% settles in USDt. That is why the realized PnL story is overwhelmingly a story about BTC quantity and BTC-denominated value changing over time; the USDt component is a small supplementary layer; the only completed external deposits were the two initial XBT deposits on 2020-05-01, and there have been no completed deposits since.
 
 This keeps the methodology auditable from the published files themselves while avoiding false cliffs when the account temporarily rotates between XBT and USDt.
 
