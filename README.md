@@ -6,6 +6,8 @@ In the AI era, high-quality context becomes the most scarce asset.
 This repository is an open-intelligence experiment: a public, inspectable, and continuously extensible mirror of a real trading account. It spans nearly six years, 43k+ orders, and 173k+ execution rows.
 The internet likely has no comparable public repository that continuously exposes the full multi-year secondary-market history of a predominantly BTC-trading account at this level of detail.
 
+**This archive is more about decision quality under uncertainty than prediction quality over price.**
+
 ![Cumulative performance](cumulative-performance.png?v=dc2dc2d11acf)
 
 BitMEX recognized Paul Wei ([`@coolish`](https://x.com/coolish)) as one of its 11th anniversary Legends and, on its public Hall of Legends page, highlighted a `70x` Bitcoin-trading return over 3 years ([source](https://www.bitmex.com/hall-of-legends)). But the deeper value of this repository is not a single headline number. It is a public, timestamped archive of long-term BTC trading through multiple market cycles — including strong calls, reversals, drawdowns, and recoveries — so readers can inspect the record in sequence rather than rely on retrospective storytelling.
