@@ -6,7 +6,7 @@ In the AI era, high-quality context becomes the most scarce asset.
 This repository is an open-intelligence experiment: a public, inspectable, and continuously extensible mirror of a real trading account. It spans nearly six years, 43k+ orders, and 173k+ execution rows.
 The internet likely has no comparable public repository that continuously exposes the full multi-year secondary-market history of a predominantly BTC-trading account at this level of detail.
 
-![Cumulative performance](cumulative-performance.png)
+![Cumulative performance](cumulative-performance.png?v=dc2dc2d11acf)
 
 ## Why this exists
 
@@ -52,6 +52,8 @@ Open intelligence instead of selective narrative.
 - Total completed withdrawals in XBT ledger: **66.00180000 XBT**
 - Latest adjusted wallet-equivalent wealth (XBT+USDt scope): **96.38685218 XBT** (**52.397274x** vs baseline)
 - Latest adjusted marked wealth (XBT+USDt scope): **95.75314961 XBT** (**52.052785x** vs baseline)
+
+In plain English: **adjusted wealth** is the wallet-equivalent curve after stripping out later external deposits and adding back later external withdrawals, so it is closer to the trading result itself. **Marked-to-market wealth** uses the same framework but swaps in the current marked margin balance, so it also reflects unrealized PnL still sitting in open positions.
 
 ## Reference docs and terminology
 
