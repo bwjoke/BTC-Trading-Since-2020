@@ -20,6 +20,11 @@ This repository does the opposite: it publishes a long-horizon, continuously upd
 
 Open intelligence instead of selective narrative.
 
+## What this dataset is and is not
+
+This is **not** a dataset for HFT, CLOB microstructure research, or millisecond price prediction.
+It is a timestamped archive of manual, discretionary, K-line-driven BTC trading — more useful for studying regime adaptation, exposure sizing, risk management, drawdown handling, and long-term compounding under irreducible uncertainty.
+
 ## Dataset window
 
 - First public event in this dataset: **2020-05-01T01:05:55.004Z**
