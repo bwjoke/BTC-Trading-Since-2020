@@ -8,7 +8,7 @@
 
 **这份档案更关心的是不确定性中的决策质量，而不是对价格的预测质量。**
 
-![累计收益曲线](cumulative-performance.png?v=dc2dc2d11acf)
+![累计收益曲线](cumulative-performance.png?v=b642b68b1500)
 
 BitMEX 在其 11 周年 `Hall of Legends` 页面中，将 Paul Wei（[`@coolish`](https://x.com/coolish)）列为官方传奇交易员之一，并公开强调其“三年内仅比特币交易收益达 70 倍”（[来源](https://www.bitmex.com/zh-hans/hall-of-legends)）。但这个仓库更深一层的价值，不在于某一个 headline 数字，而在于它把一个长期 BTC 交易过程做成了可公开检查、带时间戳、跨越多个市场周期的完整档案。这里面不只有高光，也包括反转、回撤、恢复，以及在不确定性下不断修正判断的全过程。
 
@@ -30,7 +30,7 @@ Open intelligence，而不是选择性叙事。
 ## 数据时间范围
 
 - 本次公开数据里的最早事件：**2020-05-01T01:05:55.004Z**
-- 本次构建里的最新事件/快照：**2026-04-17T16:18:45.506Z**
+- 本次构建里的最新事件/快照：**2026-05-03T05:01:51.512Z**
 - 版本策略：根目录文件名稳定不变，按天用 Git commit/tag 追踪（tag 格式：`data-YYYY-MM-DD`）
 
 ## 下载包
@@ -57,17 +57,17 @@ Open intelligence，而不是选择性叙事。
 
 ## 本次构建的几个关键事实
 
-- `api-v1-order.csv`：**43,214** 行
-- `api-v1-execution-tradeHistory.csv`：**173,058** 行
-- `api-v1-user-walletHistory.csv`：**17,099** 行
-- 时间范围：**2020-05-01 → 2026-04-17**
+- `api-v1-order.csv`：**43,219** 行
+- `api-v1-execution-tradeHistory.csv`：**173,113** 行
+- `api-v1-user-walletHistory.csv`：**17,177** 行
+- 时间范围：**2020-05-01 → 2026-05-03**
 - 按 executed trade notional 计算，BTC 相关交易约占整份全档案的 **~84.0%**
 - 但这个账户在后期明显进一步向 BTC 收敛：若只看 2022 年以来约为 **~93.7%**，2023 年以来约为 **~96.1%**，2024 年以来约为 **~99.0%**
 - 曲线基准点：**1.83953943 XBT**，时间 **2020-05-01T14:39:40.387Z**
 - XBT 钱包账本里累计完成入金：**1.77199051 XBT**
 - XBT 钱包账本里累计完成出金：**66.00180000 XBT**
-- 最新调整后钱包等值财富（XBT+USDt 范围）：**96.38685218 XBT**（相对基准 **52.397274x**）
-- 最新调整后按保证金计价财富（XBT+USDt 范围）：**95.75314961 XBT**（相对基准 **52.052785x**）
+- 最新调整后钱包等值财富（XBT+USDt 范围）：**96.32555393 XBT**（相对基准 **52.363952x**）
+- 最新调整后按保证金计价财富（XBT+USDt 范围）：**95.20953674 XBT**（相对基准 **51.757269x**）
 
 用更直白的人话说：**adjusted wealth** 可以理解为“把后续外部入金扣掉、把后续外部出金加回之后，更接近纯交易结果的财富曲线”；**marked-to-market wealth** 则是在同样框架下，把当前未平仓头寸的未实现盈亏也按盯市算进去。
 
@@ -96,7 +96,7 @@ Open intelligence，而不是选择性叙事。
 - 所有出现过 `account` 的公开文件都删除该列。
 - `api-v1-user-walletHistory.csv`：删除 `tx`，删除 `text`，仅在 `transactType` 为 `Withdrawal` 或 `Transfer` 时把 `address` 打成 `Redacted`。
 - `api-v1-order.csv`：删除 `text`。
-- `api-v1-execution-tradeHistory.csv`：保留 `text`，因为它对解释成交、资金费、结算语义仍有帮助。
+- `api-v1-execution-tradeHistory.csv`：保留 `text`，因为它对解释成交、资金费、结算语义仍有帮助；但该字段中的非 BitMEX 主机名会打成 `Redacted`。
 - `/api/v1/user` 账户资料和 `/api/v1/execution` 的原始生命周期噪音不公开。
 
 ## 派生收益曲线的方法
