@@ -8,7 +8,7 @@ The internet likely has no comparable public repository that continuously expose
 
 **This archive is more about decision quality under uncertainty than prediction quality over price.**
 
-![Cumulative performance](cumulative-performance.png?v=6222a60a95d0)
+![Cumulative performance](cumulative-performance.png?v=f0634b4759b9)
 
 BitMEX recognized Paul Wei ([`@coolish`](https://x.com/coolish)) as one of its 11th anniversary Legends and, on its public Hall of Legends page, highlighted a `70x` Bitcoin-trading return over 3 years ([source](https://www.bitmex.com/hall-of-legends)). But the deeper value of this repository is not a single headline number. It is a public, timestamped archive of long-term BTC trading through multiple market cycles — including strong calls, reversals, drawdowns, and recoveries — so readers can inspect the record in sequence rather than rely on retrospective storytelling.
 
@@ -30,8 +30,8 @@ Read it instead as a timestamped archive of manual, discretionary, chart-driven 
 ## Dataset window
 
 - First public event in this dataset: **2020-05-01T01:05:55.004Z**
-- Latest public event/snapshot in this build: **2026-07-03T08:08:53.375Z**
-- Versioning policy: stable root filenames + daily Git commit/tag (`data-2026-07-03` is the tag format)
+- Latest public event/snapshot in this build: **2026-07-19T12:35:02.029Z**
+- Versioning policy: stable root filenames + daily Git commit/tag (`data-2026-07-19` is the tag format)
 
 ## Download packages
 
@@ -57,17 +57,17 @@ Read it instead as a timestamped archive of manual, discretionary, chart-driven 
 
 ## High-level facts from this build
 
-- `api-v1-order.csv`: **43,243** rows
-- `api-v1-execution-tradeHistory.csv`: **173,373** rows
-- `api-v1-user-walletHistory.csv`: **17,424** rows
-- Time span: **2020-05-01 → 2026-07-03**
+- `api-v1-order.csv`: **43,251** rows
+- `api-v1-execution-tradeHistory.csv`: **173,434** rows
+- `api-v1-user-walletHistory.csv`: **17,484** rows
+- Time span: **2020-05-01 → 2026-07-19**
 - By executed trade notional, BTC-related symbols account for **~84.0%** of the full archive
 - The account becomes much more BTC-concentrated in later years: **~93.7%** from 2022 onward, **~96.1%** from 2023 onward, and **~99.0%** from 2024 onward
 - Chart baseline: **1.83953943 XBT** at **2020-05-01T14:39:40.387Z**
 - Total completed deposits in XBT ledger: **1.77199051 XBT**
 - Total completed withdrawals in XBT ledger: **66.00180000 XBT**
-- Latest adjusted wallet-equivalent wealth (XBT+USDt scope): **97.81111490 XBT** (**53.171524x** vs baseline)
-- Latest adjusted marked wealth (XBT+USDt scope): **100.44120814 XBT** (**54.601280x** vs baseline)
+- Latest adjusted wallet-equivalent wealth (XBT+USDt scope): **98.13610009 XBT** (**53.348191x** vs baseline)
+- Latest adjusted marked wealth (XBT+USDt scope): **99.78565178 XBT** (**54.244911x** vs baseline)
 
 In plain English: **adjusted wealth** is the wallet-equivalent curve after stripping out later external deposits and adding back later external withdrawals, so it is closer to the trading result itself. **Marked-to-market wealth** uses the same framework but swaps in the current marked margin balance, so it also reflects unrealized PnL still sitting in open positions.
 
@@ -79,7 +79,7 @@ In plain English: **adjusted wealth** is the wallet-equivalent curve after strip
 
 ## Live current-state companion
 
-For a real-time dashboard companion to this archive, see: **https://wsnb.online**
+For a community-created real-time dashboard showing this account's live positions and order data, see: **https://wsnb.online**
 This repository is the long-horizon historical layer; `wsnb.online` is the live current-state layer.
 
 ## How to read the files
