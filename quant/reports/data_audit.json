@@ -1,0 +1,5176 @@
+{
+  "audit_version": "M0-01/1.0",
+  "generated_at_utc": "2026-08-19T02:44:51.759122Z",
+  "root": "C:\\Users\\yhyzd\\Documents\\Codex\\2026-08-19\\m0-01-1-fork-text-fork\\outputs\\BTC-Trading-Since-2020",
+  "source": {
+    "repository": "bwjoke/BTC-Trading-Since-2020",
+    "commit": "f02a691c7f7cfd0cd08ffb7f13a656ebaf2c6ca6",
+    "branch": "quant/m0-data-audit",
+    "manifest_generated_at": "2026-07-19T12:35:13Z",
+    "dataset_window_declared": {
+      "first_time": "2020-05-01T01:05:55.004Z",
+      "last_time": "2026-07-19T12:35:02.029Z"
+    }
+  },
+  "reader": {
+    "mode": "Polars batched reader with stdlib csv streaming fallback",
+    "batch_size": 50000,
+    "raw_files_modified": false
+  },
+  "manifest_consistency": {
+    "spec_version": "1.0",
+    "file_count": 13,
+    "checks": [
+      {
+        "file": "api-v1-execution-tradeHistory.csv",
+        "declared": {
+          "rows": 173434,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "execType",
+            "ordStatus",
+            "symbol",
+            "side",
+            "orderQty",
+            "lastQty",
+            "leavesQty",
+            "price",
+            "lastPx",
+            "avgPx",
+            "currency",
+            "settlCurrency",
+            "execCost",
+            "execComm",
+            "realisedPnl",
+            "homeNotional",
+            "foreignNotional",
+            "orderID",
+            "execID",
+            "trdMatchID",
+            "text",
+            "brokerCommission",
+            "brokerExecComm",
+            "commission",
+            "cumQty",
+            "displayQty",
+            "execCommCcy",
+            "execInst",
+            "feeType",
+            "lastLiquidityInd",
+            "ordType",
+            "pool",
+            "stopPx",
+            "strategy",
+            "timeInForce",
+            "tradePublishIndicator",
+            "triggered",
+            "workingIndicator"
+          ],
+          "sha256": "c778ddc90b7d60c0a47c1a155602595775879f5da7a7cb0843beeb0f6638f998",
+          "size_bytes": 68562804,
+          "first_time": "2020-05-01T09:03:47.360Z",
+          "last_time": "2026-07-19T12:00:00.330Z"
+        },
+        "actual": {
+          "size_bytes": 68562804,
+          "sha256": "c778ddc90b7d60c0a47c1a155602595775879f5da7a7cb0843beeb0f6638f998",
+          "rows": 173434,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "execType",
+            "ordStatus",
+            "symbol",
+            "side",
+            "orderQty",
+            "lastQty",
+            "leavesQty",
+            "price",
+            "lastPx",
+            "avgPx",
+            "currency",
+            "settlCurrency",
+            "execCost",
+            "execComm",
+            "realisedPnl",
+            "homeNotional",
+            "foreignNotional",
+            "orderID",
+            "execID",
+            "trdMatchID",
+            "text",
+            "brokerCommission",
+            "brokerExecComm",
+            "commission",
+            "cumQty",
+            "displayQty",
+            "execCommCcy",
+            "execInst",
+            "feeType",
+            "lastLiquidityInd",
+            "ordType",
+            "pool",
+            "stopPx",
+            "strategy",
+            "timeInForce",
+            "tradePublishIndicator",
+            "triggered",
+            "workingIndicator"
+          ],
+          "first_time": "2020-05-01T09:03:47.36Z",
+          "last_time": "2026-07-19T12:00:00.33Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-order.csv",
+        "declared": {
+          "rows": 43251,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "ordStatus",
+            "ordType",
+            "symbol",
+            "side",
+            "orderQty",
+            "cumQty",
+            "leavesQty",
+            "price",
+            "avgPx",
+            "stopPx",
+            "timeInForce",
+            "execInst",
+            "displayQty",
+            "workingIndicator",
+            "triggered",
+            "orderID",
+            "currency",
+            "ordRejReason",
+            "settlCurrency",
+            "strategy"
+          ],
+          "sha256": "32d05a5b4482d4c725593596c6f6e09018e42a2221fa73056cb82f6e186caf34",
+          "size_bytes": 7798385,
+          "first_time": "2020-05-01T09:03:47.360Z",
+          "last_time": "2026-07-18T22:11:15.557Z"
+        },
+        "actual": {
+          "size_bytes": 7798385,
+          "sha256": "32d05a5b4482d4c725593596c6f6e09018e42a2221fa73056cb82f6e186caf34",
+          "rows": 43251,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "ordStatus",
+            "ordType",
+            "symbol",
+            "side",
+            "orderQty",
+            "cumQty",
+            "leavesQty",
+            "price",
+            "avgPx",
+            "stopPx",
+            "timeInForce",
+            "execInst",
+            "displayQty",
+            "workingIndicator",
+            "triggered",
+            "orderID",
+            "currency",
+            "ordRejReason",
+            "settlCurrency",
+            "strategy"
+          ],
+          "first_time": "2020-05-01T09:03:47.36Z",
+          "last_time": "2026-07-18T22:11:15.557Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-user-walletHistory.csv",
+        "declared": {
+          "rows": 17484,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "transactType",
+            "transactStatus",
+            "currency",
+            "network",
+            "amount",
+            "fee",
+            "walletBalance",
+            "orderID",
+            "transactID",
+            "address",
+            "marginBalance"
+          ],
+          "sha256": "08b875895b10cc62362340eecd761320888756d128515788406680e5d320105d",
+          "size_bytes": 2809134,
+          "first_time": "2020-05-01T01:05:55.004Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "actual": {
+          "size_bytes": 2809134,
+          "sha256": "08b875895b10cc62362340eecd761320888756d128515788406680e5d320105d",
+          "rows": 17484,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "transactType",
+            "transactStatus",
+            "currency",
+            "network",
+            "amount",
+            "fee",
+            "walletBalance",
+            "orderID",
+            "transactID",
+            "address",
+            "marginBalance"
+          ],
+          "first_time": "2020-05-01T01:05:55.004Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-position.snapshot.csv",
+        "declared": {
+          "rows": 1,
+          "columns": [
+            "timestamp",
+            "symbol",
+            "currency",
+            "underlying",
+            "quoteCurrency",
+            "currentQty",
+            "avgEntryPrice",
+            "breakEvenPrice",
+            "markPrice",
+            "liquidationPrice",
+            "bankruptPrice",
+            "realisedPnl",
+            "unrealisedPnl",
+            "homeNotional",
+            "foreignNotional",
+            "avgCostPrice",
+            "commission",
+            "crossMargin",
+            "currentComm",
+            "currentCost",
+            "deleveragePercentile",
+            "grossOpenPremium",
+            "initMargin",
+            "initMarginReq",
+            "isOpen",
+            "leverage",
+            "maintMargin",
+            "maintMarginReq",
+            "marginCallPrice",
+            "markValue",
+            "openOrderBuyCost",
+            "openOrderBuyPremium",
+            "openOrderBuyQty",
+            "openOrderSellCost",
+            "openOrderSellPremium",
+            "openOrderSellQty",
+            "openingQty",
+            "posComm",
+            "posCost",
+            "posCross",
+            "posInit",
+            "posLoss",
+            "posMaint",
+            "posMargin",
+            "positionReport",
+            "prevRealisedPnl",
+            "prevUnrealisedPnl",
+            "realisedCost",
+            "rebalancedPnl",
+            "riskLimit",
+            "riskValue",
+            "strategy",
+            "unrealisedCost",
+            "unrealisedPnlPcnt",
+            "unrealisedRoePcnt"
+          ],
+          "sha256": "9a3d6dc54e19353c277d3a80b362294755ee1fcc52ef09376be6257a929c1d88",
+          "size_bytes": 1088,
+          "first_time": "2026-07-19T12:35:00.504Z",
+          "last_time": "2026-07-19T12:35:00.504Z"
+        },
+        "actual": {
+          "size_bytes": 1088,
+          "sha256": "9a3d6dc54e19353c277d3a80b362294755ee1fcc52ef09376be6257a929c1d88",
+          "rows": 1,
+          "columns": [
+            "timestamp",
+            "symbol",
+            "currency",
+            "underlying",
+            "quoteCurrency",
+            "currentQty",
+            "avgEntryPrice",
+            "breakEvenPrice",
+            "markPrice",
+            "liquidationPrice",
+            "bankruptPrice",
+            "realisedPnl",
+            "unrealisedPnl",
+            "homeNotional",
+            "foreignNotional",
+            "avgCostPrice",
+            "commission",
+            "crossMargin",
+            "currentComm",
+            "currentCost",
+            "deleveragePercentile",
+            "grossOpenPremium",
+            "initMargin",
+            "initMarginReq",
+            "isOpen",
+            "leverage",
+            "maintMargin",
+            "maintMarginReq",
+            "marginCallPrice",
+            "markValue",
+            "openOrderBuyCost",
+            "openOrderBuyPremium",
+            "openOrderBuyQty",
+            "openOrderSellCost",
+            "openOrderSellPremium",
+            "openOrderSellQty",
+            "openingQty",
+            "posComm",
+            "posCost",
+            "posCross",
+            "posInit",
+            "posLoss",
+            "posMaint",
+            "posMargin",
+            "positionReport",
+            "prevRealisedPnl",
+            "prevUnrealisedPnl",
+            "realisedCost",
+            "rebalancedPnl",
+            "riskLimit",
+            "riskValue",
+            "strategy",
+            "unrealisedCost",
+            "unrealisedPnlPcnt",
+            "unrealisedRoePcnt"
+          ],
+          "first_time": "2026-07-19T12:35:00.504Z",
+          "last_time": "2026-07-19T12:35:00.504Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-user-wallet.snapshot-all.csv",
+        "declared": {
+          "rows": 15,
+          "columns": [
+            "timestamp",
+            "currency",
+            "amount",
+            "deposited",
+            "withdrawn",
+            "transferIn",
+            "transferOut",
+            "pendingCredit",
+            "pendingDebit",
+            "confirmedDebit"
+          ],
+          "sha256": "b7934fdbc45c714bc7aaf6a51854024f288b7a916202ae4eed51c35a96205777",
+          "size_bytes": 897,
+          "first_time": "2025-11-25T09:22:52.847Z",
+          "last_time": "2026-07-19T12:00:00.330Z"
+        },
+        "actual": {
+          "size_bytes": 897,
+          "sha256": "b7934fdbc45c714bc7aaf6a51854024f288b7a916202ae4eed51c35a96205777",
+          "rows": 15,
+          "columns": [
+            "timestamp",
+            "currency",
+            "amount",
+            "deposited",
+            "withdrawn",
+            "transferIn",
+            "transferOut",
+            "pendingCredit",
+            "pendingDebit",
+            "confirmedDebit"
+          ],
+          "first_time": "2025-11-25T09:22:52.847Z",
+          "last_time": "2026-07-19T12:00:00.33Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-user-margin.snapshot-all.csv",
+        "declared": {
+          "rows": 3,
+          "columns": [
+            "timestamp",
+            "currency",
+            "walletBalance",
+            "marginBalance",
+            "availableMargin",
+            "withdrawableMargin",
+            "systemWithdrawableMargin",
+            "amount",
+            "realisedPnl",
+            "unrealisedPnl",
+            "marginLeverage",
+            "marginUsedPcnt",
+            "riskLimit",
+            "riskValue",
+            "initMargin",
+            "maintMargin",
+            "excessMargin",
+            "foreignMarginBalance",
+            "foreignRequirement",
+            "grossComm",
+            "grossMarkValue",
+            "grossOpenCost",
+            "grossOpenPremium",
+            "isolatedUnrealisedPnl",
+            "targetExcessMargin"
+          ],
+          "sha256": "b793b9d596d585cedc18f4b87ad1a046bc285e3998ef89be52b665b5871fa100",
+          "size_bytes": 890,
+          "first_time": "2026-04-29T02:09:35.360Z",
+          "last_time": "2026-07-19T12:35:00.504Z"
+        },
+        "actual": {
+          "size_bytes": 890,
+          "sha256": "b793b9d596d585cedc18f4b87ad1a046bc285e3998ef89be52b665b5871fa100",
+          "rows": 3,
+          "columns": [
+            "timestamp",
+            "currency",
+            "walletBalance",
+            "marginBalance",
+            "availableMargin",
+            "withdrawableMargin",
+            "systemWithdrawableMargin",
+            "amount",
+            "realisedPnl",
+            "unrealisedPnl",
+            "marginLeverage",
+            "marginUsedPcnt",
+            "riskLimit",
+            "riskValue",
+            "initMargin",
+            "maintMargin",
+            "excessMargin",
+            "foreignMarginBalance",
+            "foreignRequirement",
+            "grossComm",
+            "grossMarkValue",
+            "grossOpenCost",
+            "grossOpenPremium",
+            "isolatedUnrealisedPnl",
+            "targetExcessMargin"
+          ],
+          "first_time": "2026-04-29T02:09:35.36Z",
+          "last_time": "2026-07-19T12:35:00.504Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-user-walletSummary.all.csv",
+        "declared": {
+          "rows": 80,
+          "columns": [
+            "currency",
+            "transactType",
+            "symbol",
+            "amount",
+            "fee",
+            "walletBalance",
+            "marginBalance",
+            "pendingDebit",
+            "realisedPnl",
+            "unrealisedPnl"
+          ],
+          "sha256": "55a8e4c1df8e45a8e53f0676f1114039cadd7a59237bf9ae7bcde8822e4c204b",
+          "size_bytes": 4911,
+          "first_time": null,
+          "last_time": null
+        },
+        "actual": {
+          "size_bytes": 4911,
+          "sha256": "55a8e4c1df8e45a8e53f0676f1114039cadd7a59237bf9ae7bcde8822e4c204b",
+          "rows": 80,
+          "columns": [
+            "currency",
+            "transactType",
+            "symbol",
+            "amount",
+            "fee",
+            "walletBalance",
+            "marginBalance",
+            "pendingDebit",
+            "realisedPnl",
+            "unrealisedPnl"
+          ],
+          "first_time": null,
+          "last_time": null
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-instrument.all.csv",
+        "declared": {
+          "rows": 3090,
+          "columns": [
+            "symbol",
+            "state",
+            "typ",
+            "listing",
+            "expiry",
+            "settle",
+            "underlying",
+            "quoteCurrency",
+            "settlCurrency",
+            "isInverse",
+            "isQuanto",
+            "multiplier",
+            "underlyingToPositionMultiplier",
+            "underlyingToSettleMultiplier",
+            "quoteToSettleMultiplier",
+            "lotSize",
+            "tickSize",
+            "makerFee",
+            "takerFee",
+            "askPrice",
+            "bidPrice",
+            "calcInterval",
+            "capped",
+            "closingTimestamp",
+            "deleverage",
+            "fairBasis",
+            "fairBasisRate",
+            "fairMethod",
+            "fairPrice",
+            "foreignNotional24h",
+            "front",
+            "fundingBaseRate",
+            "fundingBaseSymbol",
+            "fundingInterval",
+            "fundingPremiumSymbol",
+            "fundingQuoteRate",
+            "fundingQuoteSymbol",
+            "fundingRate",
+            "fundingTimestamp",
+            "hasLiquidity",
+            "highPrice",
+            "homeNotional24h",
+            "impactAskPrice",
+            "impactBidPrice",
+            "impactMidPrice",
+            "indicativeFundingRate",
+            "indicativeSettlePrice",
+            "initMargin",
+            "instantPnl",
+            "instrumentID",
+            "lastChangePcnt",
+            "lastPrice",
+            "lastPriceProtected",
+            "lastTickDirection",
+            "limit",
+            "limitDownPrice",
+            "limitUpPrice",
+            "listedSettle",
+            "lowPrice",
+            "maintMargin",
+            "markMethod",
+            "markPrice",
+            "maxOrderQty",
+            "maxPrice",
+            "midPrice",
+            "minPrice",
+            "minTick",
+            "openInterest",
+            "openValue",
+            "openingTimestamp",
+            "pool",
+            "positionCurrency",
+            "prevClosePrice",
+            "prevPrice24h",
+            "prevTotalTurnover",
+            "prevTotalVolume",
+            "publishInterval",
+            "publishTime",
+            "rebalanceInterval",
+            "rebalanceTimestamp",
+            "reference",
+            "referenceSymbol",
+            "riskLimit",
+            "riskStep",
+            "rootSymbol",
+            "settledPrice",
+            "settledPriceAdjustmentRate",
+            "settlementFee",
+            "taxed",
+            "timestamp",
+            "totalTurnover",
+            "totalVolume",
+            "turnover",
+            "turnover24h",
+            "underlyingSymbol",
+            "volume",
+            "volume24h",
+            "vwap"
+          ],
+          "sha256": "457212f89cf40bf854492c500f13d4e117e76f6f8bf583a807921a12a90d5d31",
+          "size_bytes": 1248491,
+          "first_time": "2014-11-21T21:00:02.409Z",
+          "last_time": "2026-07-19T12:35:03.897Z"
+        },
+        "actual": {
+          "size_bytes": 1248491,
+          "sha256": "457212f89cf40bf854492c500f13d4e117e76f6f8bf583a807921a12a90d5d31",
+          "rows": 3090,
+          "columns": [
+            "symbol",
+            "state",
+            "typ",
+            "listing",
+            "expiry",
+            "settle",
+            "underlying",
+            "quoteCurrency",
+            "settlCurrency",
+            "isInverse",
+            "isQuanto",
+            "multiplier",
+            "underlyingToPositionMultiplier",
+            "underlyingToSettleMultiplier",
+            "quoteToSettleMultiplier",
+            "lotSize",
+            "tickSize",
+            "makerFee",
+            "takerFee",
+            "askPrice",
+            "bidPrice",
+            "calcInterval",
+            "capped",
+            "closingTimestamp",
+            "deleverage",
+            "fairBasis",
+            "fairBasisRate",
+            "fairMethod",
+            "fairPrice",
+            "foreignNotional24h",
+            "front",
+            "fundingBaseRate",
+            "fundingBaseSymbol",
+            "fundingInterval",
+            "fundingPremiumSymbol",
+            "fundingQuoteRate",
+            "fundingQuoteSymbol",
+            "fundingRate",
+            "fundingTimestamp",
+            "hasLiquidity",
+            "highPrice",
+            "homeNotional24h",
+            "impactAskPrice",
+            "impactBidPrice",
+            "impactMidPrice",
+            "indicativeFundingRate",
+            "indicativeSettlePrice",
+            "initMargin",
+            "instantPnl",
+            "instrumentID",
+            "lastChangePcnt",
+            "lastPrice",
+            "lastPriceProtected",
+            "lastTickDirection",
+            "limit",
+            "limitDownPrice",
+            "limitUpPrice",
+            "listedSettle",
+            "lowPrice",
+            "maintMargin",
+            "markMethod",
+            "markPrice",
+            "maxOrderQty",
+            "maxPrice",
+            "midPrice",
+            "minPrice",
+            "minTick",
+            "openInterest",
+            "openValue",
+            "openingTimestamp",
+            "pool",
+            "positionCurrency",
+            "prevClosePrice",
+            "prevPrice24h",
+            "prevTotalTurnover",
+            "prevTotalVolume",
+            "publishInterval",
+            "publishTime",
+            "rebalanceInterval",
+            "rebalanceTimestamp",
+            "reference",
+            "referenceSymbol",
+            "riskLimit",
+            "riskStep",
+            "rootSymbol",
+            "settledPrice",
+            "settledPriceAdjustmentRate",
+            "settlementFee",
+            "taxed",
+            "timestamp",
+            "totalTurnover",
+            "totalVolume",
+            "turnover",
+            "turnover24h",
+            "underlyingSymbol",
+            "volume",
+            "volume24h",
+            "vwap"
+          ],
+          "first_time": "2014-11-21T21:00:02.409Z",
+          "last_time": "2026-07-19T12:35:03.897Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "api-v1-wallet-assets.csv",
+        "declared": {
+          "rows": 52,
+          "columns": [
+            "currency",
+            "majorCurrency",
+            "name",
+            "currencyType",
+            "scale",
+            "enabled",
+            "isMarginCurrency",
+            "memoRequired",
+            "asset",
+            "networks",
+            "assetID",
+            "maxWithdrawalAmount",
+            "minDepositAmount",
+            "minWithdrawalAmount"
+          ],
+          "sha256": "1cb904e08fb59647ec7a2c336c49571f5f1cb01253ca816edb5844a1c207b6ff",
+          "size_bytes": 17492,
+          "first_time": null,
+          "last_time": null
+        },
+        "actual": {
+          "size_bytes": 17492,
+          "sha256": "1cb904e08fb59647ec7a2c336c49571f5f1cb01253ca816edb5844a1c207b6ff",
+          "rows": 52,
+          "columns": [
+            "currency",
+            "majorCurrency",
+            "name",
+            "currencyType",
+            "scale",
+            "enabled",
+            "isMarginCurrency",
+            "memoRequired",
+            "asset",
+            "networks",
+            "assetID",
+            "maxWithdrawalAmount",
+            "minDepositAmount",
+            "minWithdrawalAmount"
+          ],
+          "first_time": null,
+          "last_time": null
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "derived-equity-curve.csv",
+        "declared": {
+          "rows": 17468,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "transactType",
+            "transactStatus",
+            "reference",
+            "eventCurrencies",
+            "walletBalanceXBT",
+            "usdtWalletBalanceUSDt",
+            "xbtUsdtRate",
+            "walletBalanceXBTEquivalent",
+            "marginBalanceXBT",
+            "marginBalanceXBTEquivalent",
+            "cumulativeCompletedDepositsAfterBaselineXBT",
+            "cumulativeCompletedWithdrawalsAfterBaselineXBT",
+            "adjustedWealthXBT",
+            "adjustedWealthMultipleVsBaseline",
+            "adjustedMarkedWealthXBT",
+            "adjustedMarkedMultipleVsBaseline",
+            "baselineBalanceXBT",
+            "baselineTimestamp",
+            "methodologyVersion"
+          ],
+          "sha256": "8923c1ced46334f301833d2b117ff89ebb7f33c465031ae1197e6126bf87c206",
+          "size_bytes": 4186724,
+          "first_time": "2020-05-01T14:39:40.387Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "actual": {
+          "size_bytes": 4186724,
+          "sha256": "8923c1ced46334f301833d2b117ff89ebb7f33c465031ae1197e6126bf87c206",
+          "rows": 17468,
+          "columns": [
+            "timestamp",
+            "transactTime",
+            "transactType",
+            "transactStatus",
+            "reference",
+            "eventCurrencies",
+            "walletBalanceXBT",
+            "usdtWalletBalanceUSDt",
+            "xbtUsdtRate",
+            "walletBalanceXBTEquivalent",
+            "marginBalanceXBT",
+            "marginBalanceXBTEquivalent",
+            "cumulativeCompletedDepositsAfterBaselineXBT",
+            "cumulativeCompletedWithdrawalsAfterBaselineXBT",
+            "adjustedWealthXBT",
+            "adjustedWealthMultipleVsBaseline",
+            "adjustedMarkedWealthXBT",
+            "adjustedMarkedMultipleVsBaseline",
+            "baselineBalanceXBT",
+            "baselineTimestamp",
+            "methodologyVersion"
+          ],
+          "first_time": "2020-05-01T14:39:40.387Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true,
+          "rows": true,
+          "columns": true,
+          "first_time": true,
+          "last_time": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "cumulative-performance.png",
+        "declared": {
+          "sha256": "f0634b4759b96754a46a1a2c20a57af9788e035db1010ebdaa6c4ffd0f730859",
+          "size_bytes": 137427
+        },
+        "actual": {
+          "size_bytes": 137427,
+          "sha256": "f0634b4759b96754a46a1a2c20a57af9788e035db1010ebdaa6c4ffd0f730859",
+          "bytes_only": true
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": true,
+          "sha256": true
+        },
+        "status": "PASS"
+      },
+      {
+        "file": "README.md",
+        "declared": {
+          "sha256": "6a3ea96f6fa71eea63802dde0c8010751a59e7c5383e96e7a258bf668972f0ee",
+          "size_bytes": 9797
+        },
+        "actual": {
+          "size_bytes": 9934,
+          "sha256": "60e330335c3ab0ef7428240f40ab8b4746c9658c49bd31feaa24f8663169987b",
+          "bytes_only": true
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": false,
+          "sha256": false
+        },
+        "status": "WARNING",
+        "note": "Committed blob matches manifest; working-tree text differs, likely due line-ending normalization."
+      },
+      {
+        "file": "README.zh-CN.md",
+        "declared": {
+          "sha256": "2c33a0b83c8b89f23d16599945ccdea0fb62b14486303bbcbb7ad4a83e7ea74a",
+          "size_bytes": 9619
+        },
+        "actual": {
+          "size_bytes": 9756,
+          "sha256": "2710c203eaab4bf15730721f4243fe1636efbe9dc0d90cfa64e352a9646175b6",
+          "bytes_only": true
+        },
+        "checks": {
+          "exists": true,
+          "size_bytes": false,
+          "sha256": false
+        },
+        "status": "WARNING",
+        "note": "Committed blob matches manifest; working-tree text differs, likely due line-ending normalization."
+      }
+    ],
+    "pass_count": 11,
+    "warning_count": 2,
+    "fail_count": 0
+  },
+  "files": {
+    "api-v1-execution-tradeHistory.csv": {
+      "file": "api-v1-execution-tradeHistory.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 173434,
+      "columns": [
+        "timestamp",
+        "transactTime",
+        "execType",
+        "ordStatus",
+        "symbol",
+        "side",
+        "orderQty",
+        "lastQty",
+        "leavesQty",
+        "price",
+        "lastPx",
+        "avgPx",
+        "currency",
+        "settlCurrency",
+        "execCost",
+        "execComm",
+        "realisedPnl",
+        "homeNotional",
+        "foreignNotional",
+        "orderID",
+        "execID",
+        "trdMatchID",
+        "text",
+        "brokerCommission",
+        "brokerExecComm",
+        "commission",
+        "cumQty",
+        "displayQty",
+        "execCommCcy",
+        "execInst",
+        "feeType",
+        "lastLiquidityInd",
+        "ordType",
+        "pool",
+        "stopPx",
+        "strategy",
+        "timeInForce",
+        "tradePublishIndicator",
+        "triggered",
+        "workingIndicator"
+      ],
+      "missing_values": {
+        "avgPx": {
+          "count": 3,
+          "ratio": 1.7297646366917676e-05
+        },
+        "brokerCommission": {
+          "count": 162326,
+          "ratio": 0.9359525813854261
+        },
+        "brokerExecComm": {
+          "count": 162326,
+          "ratio": 0.9359525813854261
+        },
+        "displayQty": {
+          "count": 171951,
+          "ratio": 0.9914491968126203
+        },
+        "execCommCcy": {
+          "count": 172297,
+          "ratio": 0.9934441920269382
+        },
+        "execInst": {
+          "count": 161972,
+          "ratio": 0.9339114591141299
+        },
+        "feeType": {
+          "count": 147067,
+          "ratio": 0.8479709860811605
+        },
+        "lastLiquidityInd": {
+          "count": 9896,
+          "ratio": 0.057059169482339106
+        },
+        "leavesQty": {
+          "count": 2500,
+          "ratio": 0.01441470530576473
+        },
+        "orderID": {
+          "count": 12956,
+          "ratio": 0.07470276877659514
+        },
+        "price": {
+          "count": 7769,
+          "ratio": 0.044795138208194474
+        },
+        "realisedPnl": {
+          "count": 157695,
+          "ratio": 0.9092507812770275
+        },
+        "settlCurrency": {
+          "count": 208,
+          "ratio": 0.0011993034814396254
+        },
+        "side": {
+          "count": 12905,
+          "ratio": 0.07440870878835754
+        },
+        "stopPx": {
+          "count": 172352,
+          "ratio": 0.993761315543665
+        },
+        "strategy": {
+          "count": 170880,
+          "ratio": 0.9852739370596307
+        },
+        "tradePublishIndicator": {
+          "count": 12908,
+          "ratio": 0.07442600643472445
+        },
+        "triggered": {
+          "count": 172383,
+          "ratio": 0.9939400578894565
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": "execID",
+      "key_quality": {
+        "column": "execID",
+        "nonempty_values": 173434,
+        "missing_values": 0,
+        "duplicate_rows": 0,
+        "duplicate_key_values": 0,
+        "classification_counts": {},
+        "duplicate_groups": []
+      },
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 173434,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 10,
+          "first_time": "2020-05-01T09:03:47.36Z",
+          "last_time": "2026-07-19T12:00:00.33Z"
+        },
+        "transactTime": {
+          "nonempty": 173434,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2020-05-01T09:03:47.36Z",
+          "last_time": "2026-07-19T12:00:00.33Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2020-05-01T09:03:47.36Z",
+      "last_time": "2026-07-19T12:00:00.33Z",
+      "enumerations": {
+        "execType": {
+          "Funding": 12905,
+          "Settlement": 19,
+          "Trade": 160510
+        },
+        "ordStatus": {
+          "Filled": 44219,
+          "PartiallyFilled": 129215
+        },
+        "side": {
+          "<MISSING>": 12905,
+          "Buy": 77559,
+          "Sell": 82970
+        },
+        "symbol": {
+          "AAVEUSDT": 567,
+          "ADAM20": 366,
+          "ADAUSD": 575,
+          "ADAUSDT": 155,
+          "ALTMEXUSD": 70,
+          "AXSUSDT": 919,
+          "BCHH21": 101,
+          "BCHUSD": 154,
+          "BMEXUSD": 143,
+          "BMEX_USDT": 201,
+          "BNBUSD": 28,
+          "BNBUSDT": 185,
+          "DOGEUSD": 5924,
+          "DOGEUSDT": 2068,
+          "DOTUSDT": 3506,
+          "DOTUSDTH21": 49,
+          "EOSH21": 37,
+          "EOSUSDTZ20": 7,
+          "ETHH21": 1138,
+          "ETHH22": 477,
+          "ETHH23": 391,
+          "ETHH24": 35,
+          "ETHM20": 86,
+          "ETHM21": 178,
+          "ETHM22": 234,
+          "ETHM23": 351,
+          "ETHM24": 282,
+          "ETHU20": 221,
+          "ETHU21": 476,
+          "ETHU22": 47,
+          "ETHU23": 180,
+          "ETHU24": 157,
+          "ETHUSD": 19470,
+          "ETHUSDZ20": 8,
+          "ETHZ20": 1168,
+          "ETHZ21": 870,
+          "ETHZ22": 182,
+          "ETHZ23": 271,
+          "ETHZ24": 80,
+          "LINKUSDT": 253,
+          "LINKUSDTZ20": 16,
+          "LTCH21": 1414,
+          "LTCM20": 387,
+          "LTCM21": 172,
+          "LTCU20": 316,
+          "LTCU21": 418,
+          "LTCUSD": 7473,
+          "LTCZ20": 816,
+          "LTCZ21": 122,
+          "LUNAUSD": 428,
+          "ORDIUSD": 407,
+          "TRXH21": 2218,
+          "TRXM20": 137,
+          "TRXM21": 1468,
+          "TRXU20": 771,
+          "TRXU21": 1759,
+          "TRXUSDT": 27,
+          "TRXZ20": 498,
+          "TRXZ21": 124,
+          "UNIUSDT": 889,
+          "XBTM21": 19,
+          "XBTUSD": 104880,
+          "XBT_USDT": 7,
+          "XLMUSDT": 54,
+          "XRPUSD": 6128,
+          "XTZUSDTZ20": 9,
+          "YFIUSDTH21": 359,
+          "YFIUSDTZ20": 508
+        },
+        "lastLiquidityInd": {
+          "<MISSING>": 9896,
+          "AddedLiquidity": 74586,
+          "RemovedLiquidity": 88952
+        }
+      },
+      "numeric": {
+        "execCost": {
+          "count": 173434,
+          "parse_failures": 0,
+          "min": -13372421855.0,
+          "max": 11847861188.0,
+          "mean": 30696664.39767289,
+          "top_absolute_values": [
+            {
+              "absolute_value": 13372421855.0,
+              "line": 56959,
+              "value": -13372421855.0,
+              "timestamp": "2021-03-18T20:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "39e23b83-0a68-6f3d-427d-8eec334de508"
+            },
+            {
+              "absolute_value": 12431904375.0,
+              "line": 64316,
+              "value": -12431904375.0,
+              "timestamp": "2021-04-18T12:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "80c0afcc-a758-2d83-0f93-eb90092762ea"
+            },
+            {
+              "absolute_value": 12287446038.0,
+              "line": 71598,
+              "value": -12287446038.0,
+              "timestamp": "2021-05-12T20:00:00.000Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "cca8ba9f-9bb6-e77f-cca0-d9bfe7392708"
+            },
+            {
+              "absolute_value": 11847861188.0,
+              "line": 71720,
+              "value": 11847861188.0,
+              "timestamp": "2021-05-12T23:57:23.880Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "4b5489d9-1b0c-8668-9741-acb983cc8222"
+            },
+            {
+              "absolute_value": 11424693425.0,
+              "line": 65008,
+              "value": -11424693425.0,
+              "timestamp": "2021-04-20T12:00:00.005Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "9ec6f7e1-ad6a-0a17-9dda-92925c5ce14a"
+            },
+            {
+              "absolute_value": 11105058048.0,
+              "line": 64344,
+              "value": -11105058048.0,
+              "timestamp": "2021-04-18T20:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "dae1cd89-d951-c82f-d827-c466fb995881"
+            },
+            {
+              "absolute_value": 11086504066.0,
+              "line": 65481,
+              "value": -11086504066.0,
+              "timestamp": "2021-04-21T20:00:00.000Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "354bc5f9-e83a-d84e-28ed-7d63ad1cbf4a"
+            },
+            {
+              "absolute_value": 10991715089.0,
+              "line": 65631,
+              "value": -10991715089.0,
+              "timestamp": "2021-04-22T20:00:00.001Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "f8d056da-693b-7af1-3580-3326e19e23e3"
+            },
+            {
+              "absolute_value": 10923880858.0,
+              "line": 65205,
+              "value": -10923880858.0,
+              "timestamp": "2021-04-20T20:00:00.005Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "71cde558-df48-906e-1df8-358b138b1b27"
+            },
+            {
+              "absolute_value": 10875339069.0,
+              "line": 65620,
+              "value": -10875339069.0,
+              "timestamp": "2021-04-22T04:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "4156e810-b2c6-c178-50db-b220929f20cd"
+            }
+          ],
+          "p99_absolute": 1999166895.85
+        },
+        "execComm": {
+          "count": 173434,
+          "parse_failures": 0,
+          "min": -7454007.0,
+          "max": 19309802.0,
+          "mean": 19137.481595304267,
+          "top_absolute_values": [
+            {
+              "absolute_value": 19309802.0,
+              "line": 63437,
+              "value": 19309802.0,
+              "timestamp": "2021-04-10T20:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "f7eff171-0c9b-6ab2-a8fd-c00d155f6508"
+            },
+            {
+              "absolute_value": 13560778.0,
+              "line": 75786,
+              "value": 13560778.0,
+              "timestamp": "2021-05-20T12:00:00.001Z",
+              "symbol": "ETHUSD",
+              "currency": "USD",
+              "execID": "500938c0-2ed0-becd-eea4-5caf8dd7cb20"
+            },
+            {
+              "absolute_value": 11247158.0,
+              "line": 63434,
+              "value": 11247158.0,
+              "timestamp": "2021-04-10T20:00:00.002Z",
+              "symbol": "ETHUSD",
+              "currency": "USD",
+              "execID": "ab1ad994-cd21-9782-63a5-e6d338ca0093"
+            },
+            {
+              "absolute_value": 11078377.0,
+              "line": 76703,
+              "value": 11078377.0,
+              "timestamp": "2021-05-22T12:00:00.001Z",
+              "symbol": "ETHUSD",
+              "currency": "USD",
+              "execID": "4e20e015-d971-ea5a-aff2-51f6f4cf81ca"
+            },
+            {
+              "absolute_value": 10532883.0,
+              "line": 64130,
+              "value": 10532883.0,
+              "timestamp": "2021-04-17T20:00:00.000Z",
+              "symbol": "DOTUSDT",
+              "currency": "USDT",
+              "execID": "f331159b-e140-0af0-08da-956b51648577"
+            },
+            {
+              "absolute_value": 10443861.0,
+              "line": 56959,
+              "value": 10443861.0,
+              "timestamp": "2021-03-18T20:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "39e23b83-0a68-6f3d-427d-8eec334de508"
+            },
+            {
+              "absolute_value": 10346400.0,
+              "line": 63613,
+              "value": 10346400.0,
+              "timestamp": "2021-04-13T20:00:00.002Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "cfbee846-5f80-62ff-184c-3107c27a2913"
+            },
+            {
+              "absolute_value": 9497931.0,
+              "line": 50183,
+              "value": 9497931.0,
+              "timestamp": "2021-02-18T04:00:00.001Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "189cfe01-2b80-2de3-4ffa-947ee3f5daaa"
+            },
+            {
+              "absolute_value": 8885895.0,
+              "line": 71720,
+              "value": 8885895.0,
+              "timestamp": "2021-05-12T23:57:23.880Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "execID": "4b5489d9-1b0c-8668-9741-acb983cc8222"
+            },
+            {
+              "absolute_value": 8588210.0,
+              "line": 76580,
+              "value": 8588210.0,
+              "timestamp": "2021-05-22T04:00:00.001Z",
+              "symbol": "ETHUSD",
+              "currency": "USD",
+              "execID": "f9464d6b-9879-0499-fea2-2b3fc584f46e"
+            }
+          ],
+          "p99_absolute": 430664.85
+        },
+        "realisedPnl": {
+          "count": 15739,
+          "parse_failures": 0,
+          "min": -6870867.0,
+          "max": 46116212.0,
+          "mean": 105637.66668784549,
+          "top_absolute_values": [
+            {
+              "absolute_value": 46116212.0,
+              "line": 167713,
+              "value": 46116212.0,
+              "timestamp": "2025-03-11T00:39:53.304Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "d6ce9dd4-4e85-4eb7-8437-6853d1ebb97b",
+              "execID": "00000000-006d-1000-0000-00148e48e351"
+            },
+            {
+              "absolute_value": 41173783.0,
+              "line": 173351,
+              "value": 41173783.0,
+              "timestamp": "2026-06-25T13:58:02.049Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "555524bf-15bf-4ec3-8d9a-8508092be862",
+              "execID": "00000000-006d-1000-0000-0033c110b199"
+            },
+            {
+              "absolute_value": 34401733.0,
+              "line": 172413,
+              "value": 34401733.0,
+              "timestamp": "2026-01-31T18:38:29.529Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "e2c4e32e-83ea-4d5c-94bd-174e99e0a59d",
+              "execID": "00000000-006d-1000-0000-0029c63efe6c"
+            },
+            {
+              "absolute_value": 32708645.0,
+              "line": 166872,
+              "value": 32708645.0,
+              "timestamp": "2025-02-26T20:20:02.697Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "1f2be511-3281-4a37-83c8-28b85cb9bd30",
+              "execID": "00000000-006d-1000-0000-0013b587e2dd"
+            },
+            {
+              "absolute_value": 32042921.0,
+              "line": 172432,
+              "value": 32042921.0,
+              "timestamp": "2026-02-01T23:09:32.980Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "de249436-bae1-42be-825a-1892875ef28e",
+              "execID": "00000000-006d-1000-0000-0029e36843a4"
+            },
+            {
+              "absolute_value": 30296734.0,
+              "line": 167711,
+              "value": 30296734.0,
+              "timestamp": "2025-03-10T19:00:17.804Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "26f9de0b-bd34-40b4-8176-7f77fc13986e",
+              "execID": "00000000-006d-1000-0000-00148995d197"
+            },
+            {
+              "absolute_value": 28887819.0,
+              "line": 171393,
+              "value": 28887819.0,
+              "timestamp": "2025-11-18T03:23:40.651Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "271c67e6-cc31-4fbe-a2d0-16d7dcb930c0",
+              "execID": "00000000-006d-1000-0000-00240928a48b"
+            },
+            {
+              "absolute_value": 27496183.0,
+              "line": 171337,
+              "value": 27496183.0,
+              "timestamp": "2025-11-14T12:39:46.144Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "0072384f-1406-4ca4-bd2f-b0064f38ed33",
+              "execID": "00000000-006d-1000-0000-0023a6576bc3"
+            },
+            {
+              "absolute_value": 26406503.0,
+              "line": 166925,
+              "value": 26406503.0,
+              "timestamp": "2025-02-28T05:53:24.081Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "1419d5f6-cffa-4fd1-9f48-743acff4dc50",
+              "execID": "00000000-006d-1000-0000-0013cedfe8c9"
+            },
+            {
+              "absolute_value": 23863314.0,
+              "line": 171392,
+              "value": 23863314.0,
+              "timestamp": "2025-11-18T02:16:55.600Z",
+              "symbol": "XBTUSD",
+              "currency": "USD",
+              "orderID": "c41b8848-9a7f-48fe-a02c-5481b3ec52c5",
+              "execID": "00000000-006d-1000-0000-0024072f745a"
+            }
+          ],
+          "p99_absolute": 4409628.74
+        }
+      },
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-order.csv": {
+      "file": "api-v1-order.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 43251,
+      "columns": [
+        "timestamp",
+        "transactTime",
+        "ordStatus",
+        "ordType",
+        "symbol",
+        "side",
+        "orderQty",
+        "cumQty",
+        "leavesQty",
+        "price",
+        "avgPx",
+        "stopPx",
+        "timeInForce",
+        "execInst",
+        "displayQty",
+        "workingIndicator",
+        "triggered",
+        "orderID",
+        "currency",
+        "ordRejReason",
+        "settlCurrency",
+        "strategy"
+      ],
+      "missing_values": {
+        "avgPx": {
+          "count": 11535,
+          "ratio": 0.2666990358604425
+        },
+        "displayQty": {
+          "count": 43056,
+          "ratio": 0.9954914337240758
+        },
+        "execInst": {
+          "count": 42066,
+          "ratio": 0.9726017895539988
+        },
+        "ordRejReason": {
+          "count": 43065,
+          "ratio": 0.9956995213983492
+        },
+        "orderQty": {
+          "count": 3,
+          "ratio": 6.93625580911424e-05
+        },
+        "price": {
+          "count": 936,
+          "ratio": 0.02164111812443643
+        },
+        "settlCurrency": {
+          "count": 92,
+          "ratio": 0.0021271184481283668
+        },
+        "side": {
+          "count": 3,
+          "ratio": 6.93625580911424e-05
+        },
+        "stopPx": {
+          "count": 43136,
+          "ratio": 0.9973411019398395
+        },
+        "triggered": {
+          "count": 43170,
+          "ratio": 0.9981272109315391
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 35,
+      "key_column": "orderID",
+      "key_quality": {
+        "column": "orderID",
+        "nonempty_values": 43216,
+        "missing_values": 0,
+        "duplicate_rows": 35,
+        "duplicate_key_values": 35,
+        "classification_counts": {
+          "exact_duplicate_rows": 35
+        },
+        "duplicate_groups": [
+          {
+            "key": "09497f00-9bc7-4d89-a64f-a006eb462bf6",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16471,
+            "last_line": 16506,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "0df81572-f26c-43d9-943c-18b3c1a65683",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17489,
+            "last_line": 17515,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "23a3dcc5-5969-40a5-b10b-b70aa83e71f3",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16458,
+            "last_line": 16502,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "3187d027-a459-4a00-bf9b-d0e8dd231073",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17481,
+            "last_line": 17510,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "325b3db5-43ea-4b30-9064-f02320618502",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17471,
+            "last_line": 17502,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "44a91aee-b46a-4b93-ad26-281be24666d8",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-05-28T04:57:39.189Z",
+            "last_time": "2021-05-28T04:57:39.189Z",
+            "first_line": 19993,
+            "last_line": 20002,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "44abeb3c-db9a-45b8-84f2-511e7f58c5f0",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17496,
+            "last_line": 17508,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "48654e03-6e81-41c3-9db0-a4730147d2cc",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16470,
+            "last_line": 16507,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "4a6ab3d3-242b-4920-9996-4d9ee9fc4ae8",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-05-28T04:57:39.189Z",
+            "last_time": "2021-05-28T04:57:39.189Z",
+            "first_line": 19996,
+            "last_line": 20006,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "5028eb7d-e2af-4e58-90fb-5ce23b0b1fe3",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17494,
+            "last_line": 17511,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "5774df16-2761-438e-8194-e17166a1d172",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-09T21:23:39.537Z",
+            "last_time": "2021-03-09T21:23:39.537Z",
+            "first_line": 15488,
+            "last_line": 15505,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "60c1684f-e41e-4f3b-971b-05970c8ef5d0",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-05-28T04:57:39.189Z",
+            "last_time": "2021-05-28T04:57:39.189Z",
+            "first_line": 19991,
+            "last_line": 20004,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "68efb4b6-beae-4fc9-93f9-b07284b8f064",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-05-28T04:57:39.189Z",
+            "last_time": "2021-05-28T04:57:39.189Z",
+            "first_line": 19992,
+            "last_line": 20003,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "7d97a7e2-9ea8-402f-9feb-3207e4008c36",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17490,
+            "last_line": 17514,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "87ba1cf5-88ff-45bf-88c2-9b41d28469b3",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-09T21:23:39.537Z",
+            "last_time": "2021-03-09T21:23:39.537Z",
+            "first_line": 15498,
+            "last_line": 15502,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "8ca031a0-8d37-4a98-a08c-da8eaae589df",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16463,
+            "last_line": 16503,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "93bce7f1-ae8d-4971-8e60-ed9e80236c38",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17488,
+            "last_line": 17516,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "a025b0ca-9360-46e3-85f4-a240f0bc68aa",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17498,
+            "last_line": 17504,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "a66dfa87-974f-4816-acf1-da337e0f73eb",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17497,
+            "last_line": 17505,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "aeca8537-14c7-44ca-be8b-b38e5e9846c4",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17480,
+            "last_line": 17509,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "b0c2a368-e54b-4feb-9b4a-2ae3f74f0c59",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16481,
+            "last_line": 16505,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "b4eb2314-fce7-49a4-a0ff-61dbb72b1c4d",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17482,
+            "last_line": 17507,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "b9806364-746d-4075-b64f-4504277587f4",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17492,
+            "last_line": 17513,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "bc6a0adc-8e90-4206-9ac9-1414a99d953e",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17485,
+            "last_line": 17519,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "c0588198-f772-4aba-97e3-dc7afea3496b",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-01-04T10:57:04.689Z",
+            "last_time": "2021-01-04T10:57:04.689Z",
+            "first_line": 7500,
+            "last_line": 7505,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "c628ed12-2fce-45dd-8377-e648e6e04631",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17486,
+            "last_line": 17518,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "c835ddc0-35e5-4b36-9465-7bd18a6d3dce",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17478,
+            "last_line": 17503,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "c8a920be-1c68-4126-ac50-38f0186e188e",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16477,
+            "last_line": 16508,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "e4aa304a-a039-4b59-a9ea-26a16a232e33",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-05-28T04:57:39.189Z",
+            "last_time": "2021-05-28T04:57:39.189Z",
+            "first_line": 19998,
+            "last_line": 20005,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "e6063bf1-7116-4f73-a07c-384e1045d3b6",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-03-28T18:47:12.783Z",
+            "last_time": "2021-03-28T18:47:12.783Z",
+            "first_line": 16472,
+            "last_line": 16504,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "ec3d5421-3a98-4075-bd23-954cf497924b",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17487,
+            "last_line": 17517,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "f3107d9a-1c76-42e8-96e0-09ca95de2221",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17493,
+            "last_line": 17512,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "f311a532-d99d-4254-bf87-82ff7cb98b73",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Buy"
+            ],
+            "first_time": "2021-01-04T10:57:04.689Z",
+            "last_time": "2021-01-04T10:57:04.689Z",
+            "first_line": 7501,
+            "last_line": 7504,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "f7272149-a659-420d-bd0c-5f0c19a37f4c",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17479,
+            "last_line": 17506,
+            "classification": "exact_duplicate_rows"
+          },
+          {
+            "key": "ff4b2e74-d69d-4221-a924-39fb0a4c3df5",
+            "count": 2,
+            "unique_row_fingerprints": 1,
+            "statuses": {
+              "Canceled": 2
+            },
+            "symbols": [
+              "XBTUSD"
+            ],
+            "sides": [
+              "Sell"
+            ],
+            "first_time": "2021-04-21T20:29:58.243Z",
+            "last_time": "2021-04-21T20:29:58.243Z",
+            "first_line": 17484,
+            "last_line": 17520,
+            "classification": "exact_duplicate_rows"
+          }
+        ]
+      },
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 43251,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2020-05-01T09:03:47.36Z",
+          "last_time": "2026-07-18T22:11:15.557Z"
+        },
+        "transactTime": {
+          "nonempty": 43251,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 10501,
+          "first_time": "2020-05-01T09:03:38.162Z",
+          "last_time": "2026-07-18T22:11:15.556Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2020-05-01T09:03:47.36Z",
+      "last_time": "2026-07-18T22:11:15.557Z",
+      "enumerations": {
+        "ordStatus": {
+          "Canceled": 11783,
+          "Filled": 31262,
+          "New": 20,
+          "Rejected": 186
+        },
+        "ordType": {
+          "Limit": 35238,
+          "Market": 7898,
+          "Stop": 114,
+          "StopLimit": 1
+        },
+        "side": {
+          "<MISSING>": 3,
+          "Buy": 23749,
+          "Sell": 19499
+        },
+        "symbol": {
+          "AAVEUSDT": 123,
+          "ADAM20": 125,
+          "ADAUSD": 20,
+          "ADAUSDT": 8,
+          "ALTMEXUSD": 35,
+          "AXSUSDT": 113,
+          "BCHH21": 18,
+          "BCHUSD": 54,
+          "BMEXUSD": 49,
+          "BMEX_USDT": 90,
+          "BNBUSD": 23,
+          "BNBUSDT": 39,
+          "DOGEUSD": 1392,
+          "DOGEUSDT": 416,
+          "DOTUSDT": 159,
+          "DOTUSDTH21": 45,
+          "EOSH21": 4,
+          "EOSUSDTZ20": 2,
+          "ETHH21": 373,
+          "ETHH22": 179,
+          "ETHH23": 254,
+          "ETHH24": 46,
+          "ETHM20": 14,
+          "ETHM21": 76,
+          "ETHM22": 198,
+          "ETHM23": 221,
+          "ETHM24": 87,
+          "ETHU20": 52,
+          "ETHU21": 86,
+          "ETHU22": 45,
+          "ETHU23": 86,
+          "ETHU24": 45,
+          "ETHUSD": 5082,
+          "ETHUSDZ20": 2,
+          "ETHZ20": 288,
+          "ETHZ21": 465,
+          "ETHZ22": 77,
+          "ETHZ23": 135,
+          "ETHZ24": 38,
+          "LINKUSDT": 40,
+          "LINKUSDTZ20": 6,
+          "LTCH21": 174,
+          "LTCM20": 18,
+          "LTCM21": 12,
+          "LTCU20": 92,
+          "LTCU21": 21,
+          "LTCUSD": 1841,
+          "LTCZ20": 113,
+          "LTCZ21": 19,
+          "LUNAUSD": 134,
+          "ORDIUSD": 11,
+          "TRXH21": 182,
+          "TRXM20": 55,
+          "TRXM21": 256,
+          "TRXU20": 256,
+          "TRXU21": 83,
+          "TRXUSDT": 15,
+          "TRXZ20": 91,
+          "TRXZ21": 35,
+          "UNIUSDT": 77,
+          "XBTM21": 2,
+          "XBTUSD": 27267,
+          "XBT_USDT": 2,
+          "XLMUSDT": 6,
+          "XRPUSD": 1545,
+          "XTZUSDTZ20": 15,
+          "YFIUSDTH21": 88,
+          "YFIUSDTZ20": 231
+        }
+      },
+      "numeric": {},
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-user-walletHistory.csv": {
+      "file": "api-v1-user-walletHistory.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 17484,
+      "columns": [
+        "timestamp",
+        "transactTime",
+        "transactType",
+        "transactStatus",
+        "currency",
+        "network",
+        "amount",
+        "fee",
+        "walletBalance",
+        "orderID",
+        "transactID",
+        "address",
+        "marginBalance"
+      ],
+      "missing_values": {
+        "address": {
+          "count": 2,
+          "ratio": 0.00011439029970258523
+        },
+        "fee": {
+          "count": 2808,
+          "ratio": 0.16060398078242966
+        },
+        "marginBalance": {
+          "count": 17483,
+          "ratio": 0.9999428048501487
+        },
+        "network": {
+          "count": 17478,
+          "ratio": 0.9996568291008923
+        },
+        "orderID": {
+          "count": 10002,
+          "ratio": 0.5720658888126287
+        },
+        "transactID": {
+          "count": 1,
+          "ratio": 5.719514985129261e-05
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": "transactID",
+      "key_quality": {
+        "column": "transactID",
+        "nonempty_values": 17483,
+        "missing_values": 1,
+        "duplicate_rows": 0,
+        "duplicate_key_values": 0,
+        "classification_counts": {},
+        "duplicate_groups": []
+      },
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 17484,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2020-05-01T01:05:55.004Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "transactTime": {
+          "nonempty": 17484,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 5,
+          "first_time": "2020-05-01T01:05:55.004Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2020-05-01T01:05:55.004Z",
+      "last_time": "2026-07-19T12:35:02.029Z",
+      "enumerations": {
+        "transactType": {
+          "Conversion": 24,
+          "Deposit": 2,
+          "Funding": 2057,
+          "RealisedPNL": 15021,
+          "SpotTrade": 320,
+          "Transfer": 53,
+          "UnrealisedPNL": 1,
+          "Withdrawal": 6
+        },
+        "transactStatus": {
+          "Canceled": 1,
+          "Completed": 17482,
+          "Pending": 1
+        },
+        "currency": {
+          "BMEx": 174,
+          "USDt": 198,
+          "XBt": 17112
+        }
+      },
+      "numeric": {
+        "amount": {
+          "count": 17484,
+          "parse_failures": 0,
+          "min": -100000000000.0,
+          "max": 74983620000.0,
+          "mean": 872746.6067261497,
+          "top_absolute_values": [
+            {
+              "absolute_value": 100000000000.0,
+              "line": 2557,
+              "value": -100000000000.0,
+              "timestamp": "2022-02-22T16:48:10.411Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "148c5c7f-f0c3-4df4-be1a-b95f7769ad52"
+            },
+            {
+              "absolute_value": 100000000000.0,
+              "line": 2561,
+              "value": -100000000000.0,
+              "timestamp": "2022-02-22T16:48:51.639Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "aeced366-78ca-4817-bb3d-4233735ebfd1"
+            },
+            {
+              "absolute_value": 100000000000.0,
+              "line": 2555,
+              "value": -100000000000.0,
+              "timestamp": "2022-02-22T16:47:58.175Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "ca6c686f-b23f-4d6a-a9a1-73b2e2c18941"
+            },
+            {
+              "absolute_value": 100000000000.0,
+              "line": 2559,
+              "value": -100000000000.0,
+              "timestamp": "2022-02-22T16:48:29.806Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "a79333e8-0b6f-43c7-a438-a4349193ccdc"
+            },
+            {
+              "absolute_value": 74983620000.0,
+              "line": 2542,
+              "value": 74983620000.0,
+              "timestamp": "2022-02-22T12:22:03.573Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "2ce19ae7-638c-4f01-c82e-0d7c0f751232"
+            },
+            {
+              "absolute_value": 74968820000.0,
+              "line": 2544,
+              "value": 74968820000.0,
+              "timestamp": "2022-02-22T12:22:24.852Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "5ded572d-c1d0-93de-8143-de13a6979c83"
+            },
+            {
+              "absolute_value": 74935340000.0,
+              "line": 2546,
+              "value": 74935340000.0,
+              "timestamp": "2022-02-22T12:22:39.954Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "868a4e8b-2ffe-632e-bb6e-30054002db3a"
+            },
+            {
+              "absolute_value": 74909820000.0,
+              "line": 2548,
+              "value": 74909820000.0,
+              "timestamp": "2022-02-22T12:22:58.634Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "88089e27-af0b-8a5b-0883-f341b5254ef0"
+            },
+            {
+              "absolute_value": 74811180000.0,
+              "line": 2550,
+              "value": 74811180000.0,
+              "timestamp": "2022-02-22T12:23:15.883Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "745ed697-7068-f81c-f15c-5fb7ff0d4eb6"
+            },
+            {
+              "absolute_value": 74768840000.0,
+              "line": 2552,
+              "value": 74768840000.0,
+              "timestamp": "2022-02-22T12:23:35.190Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "d05205d9-6ce5-6f3e-7e50-f38563dae3c3"
+            }
+          ],
+          "p99_absolute": 318128595.64
+        },
+        "fee": {
+          "count": 14676,
+          "parse_failures": 0,
+          "min": -2516254.0,
+          "max": 1183922.0,
+          "mean": -3229.905628236577,
+          "top_absolute_values": [
+            {
+              "absolute_value": 2516254.0,
+              "line": 9839,
+              "value": -2516254.0,
+              "timestamp": "2024-12-05T20:00:00.140Z",
+              "currency": "XBt",
+              "transactType": "Funding",
+              "transactID": "00000000-0077-1000-0000-00001ee64d16"
+            },
+            {
+              "absolute_value": 1583909.0,
+              "line": 9837,
+              "value": -1583909.0,
+              "timestamp": "2024-12-05T12:00:00.186Z",
+              "currency": "XBt",
+              "transactType": "Funding",
+              "transactID": "00000000-0077-1000-0000-00001ecfec5d"
+            },
+            {
+              "absolute_value": 1538757.0,
+              "line": 9393,
+              "value": -1538757.0,
+              "timestamp": "2024-11-12T20:00:00.139Z",
+              "currency": "XBt",
+              "transactType": "Funding",
+              "transactID": "00000000-0077-1000-0000-000019e0852f"
+            },
+            {
+              "absolute_value": 1183922.0,
+              "line": 9116,
+              "value": 1183922.0,
+              "timestamp": "2024-11-04T22:16:01.905Z",
+              "currency": "XBt",
+              "transactType": "RealisedPNL",
+              "orderID": "7e2e475a-eaa1-461d-acea-32dc23c7c299",
+              "transactID": "00000000-0077-1000-0000-00001883d849"
+            },
+            {
+              "absolute_value": 1181127.0,
+              "line": 12788,
+              "value": 1181127.0,
+              "timestamp": "2025-03-30T20:00:00.181Z",
+              "currency": "XBt",
+              "transactType": "Funding",
+              "transactID": "00000000-0077-1000-0000-0000332611cd"
+            },
+            {
+              "absolute_value": 1167700.0,
+              "line": 9120,
+              "value": 1167700.0,
+              "timestamp": "2024-11-04T22:57:37.033Z",
+              "currency": "XBt",
+              "transactType": "RealisedPNL",
+              "orderID": "19a79a92-f21e-4b16-b300-fb015277d760",
+              "transactID": "00000000-0077-1000-0000-00001884838c"
+            },
+            {
+              "absolute_value": 1167544.0,
+              "line": 9121,
+              "value": 1167544.0,
+              "timestamp": "2024-11-04T22:57:41.243Z",
+              "currency": "XBt",
+              "transactType": "RealisedPNL",
+              "orderID": "afb2f580-8472-4dd7-927a-6e582db9dce3",
+              "transactID": "00000000-0077-1000-0000-000018848436"
+            },
+            {
+              "absolute_value": 1136090.0,
+              "line": 9498,
+              "value": -1136090.0,
+              "timestamp": "2024-11-18T20:00:00.124Z",
+              "currency": "XBt",
+              "transactType": "Funding",
+              "transactID": "00000000-0077-1000-0000-00001b31d81f"
+            },
+            {
+              "absolute_value": 1046112.0,
+              "line": 7832,
+              "value": 1046112.0,
+              "timestamp": "2024-09-07T20:00:00.072Z",
+              "currency": "XBt",
+              "transactType": "RealisedPNL",
+              "transactID": "00000000-0077-1000-0000-000013a5f6e5"
+            },
+            {
+              "absolute_value": 962213.0,
+              "line": 9654,
+              "value": -962213.0,
+              "timestamp": "2024-11-25T20:00:00.133Z",
+              "currency": "XBt",
+              "transactType": "Funding",
+              "transactID": "00000000-0077-1000-0000-00001cb19e69"
+            }
+          ],
+          "p99_absolute": 286432.75
+        },
+        "walletBalance": {
+          "count": 17484,
+          "parse_failures": 0,
+          "min": 0.0,
+          "max": 470380300000.0,
+          "mean": 2330966968.42353,
+          "top_absolute_values": [
+            {
+              "absolute_value": 470380300000.0,
+              "line": 2554,
+              "value": 470380300000.0,
+              "timestamp": "2022-02-22T12:23:45.475Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "0f05e90c-b1cb-66d1-b30e-1e4ae2c16dbc"
+            },
+            {
+              "absolute_value": 449377620000.0,
+              "line": 2552,
+              "value": 449377620000.0,
+              "timestamp": "2022-02-22T12:23:35.190Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "d05205d9-6ce5-6f3e-7e50-f38563dae3c3"
+            },
+            {
+              "absolute_value": 374608780000.0,
+              "line": 2550,
+              "value": 374608780000.0,
+              "timestamp": "2022-02-22T12:23:15.883Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "745ed697-7068-f81c-f15c-5fb7ff0d4eb6"
+            },
+            {
+              "absolute_value": 370380300000.0,
+              "line": 2555,
+              "value": 370380300000.0,
+              "timestamp": "2022-02-22T16:47:58.175Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "ca6c686f-b23f-4d6a-a9a1-73b2e2c18941"
+            },
+            {
+              "absolute_value": 299797600000.0,
+              "line": 2548,
+              "value": 299797600000.0,
+              "timestamp": "2022-02-22T12:22:58.634Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "88089e27-af0b-8a5b-0883-f341b5254ef0"
+            },
+            {
+              "absolute_value": 270380300000.0,
+              "line": 2557,
+              "value": 270380300000.0,
+              "timestamp": "2022-02-22T16:48:10.411Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "148c5c7f-f0c3-4df4-be1a-b95f7769ad52"
+            },
+            {
+              "absolute_value": 224887780000.0,
+              "line": 2546,
+              "value": 224887780000.0,
+              "timestamp": "2022-02-22T12:22:39.954Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "868a4e8b-2ffe-632e-bb6e-30054002db3a"
+            },
+            {
+              "absolute_value": 170380300000.0,
+              "line": 2559,
+              "value": 170380300000.0,
+              "timestamp": "2022-02-22T16:48:29.806Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "a79333e8-0b6f-43c7-a438-a4349193ccdc"
+            },
+            {
+              "absolute_value": 149952440000.0,
+              "line": 2544,
+              "value": 149952440000.0,
+              "timestamp": "2022-02-22T12:22:24.852Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "5ded572d-c1d0-93de-8143-de13a6979c83"
+            },
+            {
+              "absolute_value": 74983620000.0,
+              "line": 2542,
+              "value": 74983620000.0,
+              "timestamp": "2022-02-22T12:22:03.573Z",
+              "currency": "USDt",
+              "transactType": "Conversion",
+              "transactID": "2ce19ae7-638c-4f01-c82e-0d7c0f751232"
+            }
+          ],
+          "p99_absolute": 6695493687.0
+        },
+        "marginBalance": {
+          "count": 1,
+          "parse_failures": 0,
+          "min": 3380764154.0,
+          "max": 3380764154.0,
+          "mean": 3380764154.0,
+          "top_absolute_values": [
+            {
+              "absolute_value": 3380764154.0,
+              "line": 17485,
+              "value": 3380764154.0,
+              "timestamp": "2026-07-19T12:35:02.029Z",
+              "currency": "XBt",
+              "transactType": "UnrealisedPNL"
+            }
+          ],
+          "p99_absolute": 3380764154.0
+        }
+      },
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": [
+          {
+            "currency": "USDt",
+            "line": 2561,
+            "previous_line": 2559,
+            "previous_balance_raw": 170380300000.0,
+            "current_balance_raw": 70380300000.0,
+            "delta_raw": -100000000000.0,
+            "relative_change": -0.586922314375547,
+            "timestamp": "2022-02-22T16:48:51.639Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2559,
+            "previous_line": 2557,
+            "previous_balance_raw": 270380300000.0,
+            "current_balance_raw": 170380300000.0,
+            "delta_raw": -100000000000.0,
+            "relative_change": -0.3698494305983091,
+            "timestamp": "2022-02-22T16:48:29.806Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2557,
+            "previous_line": 2555,
+            "previous_balance_raw": 370380300000.0,
+            "current_balance_raw": 270380300000.0,
+            "delta_raw": -100000000000.0,
+            "relative_change": -0.26999276149406437,
+            "timestamp": "2022-02-22T16:48:10.411Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2555,
+            "previous_line": 2554,
+            "previous_balance_raw": 470380300000.0,
+            "current_balance_raw": 370380300000.0,
+            "delta_raw": -100000000000.0,
+            "relative_change": -0.2125939372886152,
+            "timestamp": "2022-02-22T16:47:58.175Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2544,
+            "previous_line": 2542,
+            "previous_balance_raw": 74983620000.0,
+            "current_balance_raw": 149952440000.0,
+            "delta_raw": 74968820000.0,
+            "relative_change": 0.9998026235596521,
+            "timestamp": "2022-02-22T12:22:24.852Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2546,
+            "previous_line": 2544,
+            "previous_balance_raw": 149952440000.0,
+            "current_balance_raw": 224887780000.0,
+            "delta_raw": 74935340000.0,
+            "relative_change": 0.4997273802280243,
+            "timestamp": "2022-02-22T12:22:39.954Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2548,
+            "previous_line": 2546,
+            "previous_balance_raw": 224887780000.0,
+            "current_balance_raw": 299797600000.0,
+            "delta_raw": 74909820000.0,
+            "relative_change": 0.33309866814461864,
+            "timestamp": "2022-02-22T12:22:58.634Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2550,
+            "previous_line": 2548,
+            "previous_balance_raw": 299797600000.0,
+            "current_balance_raw": 374608780000.0,
+            "delta_raw": 74811180000.0,
+            "relative_change": 0.24953895561538852,
+            "timestamp": "2022-02-22T12:23:15.883Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2552,
+            "previous_line": 2550,
+            "previous_balance_raw": 374608780000.0,
+            "current_balance_raw": 449377620000.0,
+            "delta_raw": 74768840000.0,
+            "relative_change": 0.19959179814205102,
+            "timestamp": "2022-02-22T12:23:35.19Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2563,
+            "previous_line": 2561,
+            "previous_balance_raw": 70380300000.0,
+            "current_balance_raw": 0.0,
+            "delta_raw": -70380300000.0,
+            "relative_change": -1.0,
+            "timestamp": "2022-02-22T16:49:01.177Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 2554,
+            "previous_line": 2552,
+            "previous_balance_raw": 449377620000.0,
+            "current_balance_raw": 470380300000.0,
+            "delta_raw": 21002680000.0,
+            "relative_change": 0.04673726297273104,
+            "timestamp": "2022-02-22T12:23:45.475Z",
+            "transactType": "Conversion",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "BMEx",
+            "line": 15785,
+            "previous_line": 4402,
+            "previous_balance_raw": 120000.0,
+            "current_balance_raw": 11000120000.0,
+            "delta_raw": 11000000000.0,
+            "relative_change": 91666.66666666667,
+            "timestamp": "2025-12-01T11:57:33.42Z",
+            "transactType": "Transfer",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "BMEx",
+            "line": 4386,
+            "previous_line": 3850,
+            "previous_balance_raw": 12946120000.0,
+            "current_balance_raw": 5119120000.0,
+            "delta_raw": -7827000000.0,
+            "relative_change": -0.6045826857776693,
+            "timestamp": "2023-08-31T18:02:42.143Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "BMEx",
+            "line": 3558,
+            "previous_line": 3537,
+            "previous_balance_raw": 10697120000.0,
+            "current_balance_raw": 3164120000.0,
+            "delta_raw": -7533000000.0,
+            "relative_change": -0.7042082354876826,
+            "timestamp": "2022-12-13T07:10:43.684Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 3559,
+            "previous_line": 3538,
+            "previous_balance_raw": 1004892000.0,
+            "current_balance_raw": 5603623000.0,
+            "delta_raw": 4598731000.0,
+            "relative_change": 4.5763435274636475,
+            "timestamp": "2022-12-13T07:10:43.684Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 4606,
+            "previous_line": 4403,
+            "previous_balance_raw": 4562039227.0,
+            "current_balance_raw": 14538560.0,
+            "delta_raw": -4547500667.0,
+            "relative_change": -0.9968131444565503,
+            "timestamp": "2023-10-23T20:26:14.841Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "BMEx",
+            "line": 3460,
+            "previous_line": 3386,
+            "previous_balance_raw": 10322120000.0,
+            "current_balance_raw": 6844120000.0,
+            "delta_raw": -3478000000.0,
+            "relative_change": -0.3369462862280229,
+            "timestamp": "2022-12-02T22:45:44.069Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "XBt",
+            "line": 2487,
+            "previous_line": 2486,
+            "previous_balance_raw": 6260107657.0,
+            "current_balance_raw": 3260087657.0,
+            "delta_raw": -3000020000.0,
+            "relative_change": -0.4792281801488514,
+            "timestamp": "2022-01-31T13:03:53.033Z",
+            "transactType": "Withdrawal",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "BMEx",
+            "line": 3761,
+            "previous_line": 3748,
+            "previous_balance_raw": 6174120000.0,
+            "current_balance_raw": 9101120000.0,
+            "delta_raw": 2927000000.0,
+            "relative_change": 0.47407565774555727,
+            "timestamp": "2023-02-13T14:41:39.689Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          },
+          {
+            "currency": "USDt",
+            "line": 4387,
+            "previous_line": 3851,
+            "previous_balance_raw": 108000.0,
+            "current_balance_raw": 2759700755.0,
+            "delta_raw": 2759592755.0,
+            "relative_change": 25551.78476851852,
+            "timestamp": "2023-08-31T18:02:42.143Z",
+            "transactType": "SpotTrade",
+            "transactStatus": "Completed"
+          }
+        ]
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-position.snapshot.csv": {
+      "file": "api-v1-position.snapshot.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 1,
+      "columns": [
+        "timestamp",
+        "symbol",
+        "currency",
+        "underlying",
+        "quoteCurrency",
+        "currentQty",
+        "avgEntryPrice",
+        "breakEvenPrice",
+        "markPrice",
+        "liquidationPrice",
+        "bankruptPrice",
+        "realisedPnl",
+        "unrealisedPnl",
+        "homeNotional",
+        "foreignNotional",
+        "avgCostPrice",
+        "commission",
+        "crossMargin",
+        "currentComm",
+        "currentCost",
+        "deleveragePercentile",
+        "grossOpenPremium",
+        "initMargin",
+        "initMarginReq",
+        "isOpen",
+        "leverage",
+        "maintMargin",
+        "maintMarginReq",
+        "marginCallPrice",
+        "markValue",
+        "openOrderBuyCost",
+        "openOrderBuyPremium",
+        "openOrderBuyQty",
+        "openOrderSellCost",
+        "openOrderSellPremium",
+        "openOrderSellQty",
+        "openingQty",
+        "posComm",
+        "posCost",
+        "posCross",
+        "posInit",
+        "posLoss",
+        "posMaint",
+        "posMargin",
+        "positionReport",
+        "prevRealisedPnl",
+        "prevUnrealisedPnl",
+        "realisedCost",
+        "rebalancedPnl",
+        "riskLimit",
+        "riskValue",
+        "strategy",
+        "unrealisedCost",
+        "unrealisedPnlPcnt",
+        "unrealisedRoePcnt"
+      ],
+      "missing_values": {
+        "marginCallPrice": {
+          "count": 1,
+          "ratio": 1.0
+        },
+        "openingQty": {
+          "count": 1,
+          "ratio": 1.0
+        },
+        "positionReport": {
+          "count": 1,
+          "ratio": 1.0
+        },
+        "prevUnrealisedPnl": {
+          "count": 1,
+          "ratio": 1.0
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 1,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2026-07-19T12:35:00.504Z",
+          "last_time": "2026-07-19T12:35:00.504Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2026-07-19T12:35:00.504Z",
+      "last_time": "2026-07-19T12:35:00.504Z",
+      "enumerations": {},
+      "numeric": {
+        "realisedPnl": {
+          "count": 1,
+          "parse_failures": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "top_absolute_values": [
+            {
+              "absolute_value": 0.0,
+              "line": 2,
+              "value": 0.0,
+              "timestamp": "2026-07-19T12:35:00.504Z",
+              "symbol": "XBTUSD",
+              "currency": "XBt"
+            }
+          ],
+          "p99_absolute": 0.0
+        }
+      },
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-user-wallet.snapshot-all.csv": {
+      "file": "api-v1-user-wallet.snapshot-all.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 15,
+      "columns": [
+        "timestamp",
+        "currency",
+        "amount",
+        "deposited",
+        "withdrawn",
+        "transferIn",
+        "transferOut",
+        "pendingCredit",
+        "pendingDebit",
+        "confirmedDebit"
+      ],
+      "missing_values": {},
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 15,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 14,
+          "first_time": "2025-11-25T09:22:52.847Z",
+          "last_time": "2026-07-19T12:00:00.33Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2025-11-25T09:22:52.847Z",
+      "last_time": "2026-07-19T12:00:00.33Z",
+      "enumerations": {},
+      "numeric": {
+        "amount": {
+          "count": 15,
+          "parse_failures": 0,
+          "min": 0.0,
+          "max": 11000120000.0,
+          "mean": 1006944433.5333333,
+          "top_absolute_values": [
+            {
+              "absolute_value": 11000120000.0,
+              "line": 4,
+              "value": 11000120000.0,
+              "timestamp": "2026-04-29T02:09:35.360Z",
+              "currency": "BMEx"
+            },
+            {
+              "absolute_value": 3215808985.0,
+              "line": 2,
+              "value": 3215808985.0,
+              "timestamp": "2026-07-19T12:00:00.330Z",
+              "currency": "XBt"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 3,
+              "value": 888237518.0,
+              "timestamp": "2026-05-30T00:01:00.000Z",
+              "currency": "USDt"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 10,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:24:33.788Z",
+              "currency": "AVAx"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 11,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:24:32.216Z",
+              "currency": "LOt"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 13,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:23:29.114Z",
+              "currency": "BCh"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 12,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:24:03.095Z",
+              "currency": "POl"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 16,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:22:52.847Z",
+              "currency": "DOGe"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 14,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:23:24.734Z",
+              "currency": "XRp"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 15,
+              "value": 0.0,
+              "timestamp": "2025-11-25T09:22:55.592Z",
+              "currency": "NEAr"
+            }
+          ],
+          "p99_absolute": 9910316457.9
+        }
+      },
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-user-margin.snapshot-all.csv": {
+      "file": "api-v1-user-margin.snapshot-all.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 3,
+      "columns": [
+        "timestamp",
+        "currency",
+        "walletBalance",
+        "marginBalance",
+        "availableMargin",
+        "withdrawableMargin",
+        "systemWithdrawableMargin",
+        "amount",
+        "realisedPnl",
+        "unrealisedPnl",
+        "marginLeverage",
+        "marginUsedPcnt",
+        "riskLimit",
+        "riskValue",
+        "initMargin",
+        "maintMargin",
+        "excessMargin",
+        "foreignMarginBalance",
+        "foreignRequirement",
+        "grossComm",
+        "grossMarkValue",
+        "grossOpenCost",
+        "grossOpenPremium",
+        "isolatedUnrealisedPnl",
+        "targetExcessMargin"
+      ],
+      "missing_values": {
+        "isolatedUnrealisedPnl": {
+          "count": 3,
+          "ratio": 1.0
+        },
+        "riskLimit": {
+          "count": 1,
+          "ratio": 0.3333333333333333
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 3,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2026-04-29T02:09:35.36Z",
+          "last_time": "2026-07-19T12:35:00.504Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2026-04-29T02:09:35.36Z",
+      "last_time": "2026-07-19T12:35:00.504Z",
+      "enumerations": {},
+      "numeric": {
+        "walletBalance": {
+          "count": 3,
+          "parse_failures": 0,
+          "min": 888237518.0,
+          "max": 11000120000.0,
+          "mean": 5034722167.666667,
+          "top_absolute_values": [
+            {
+              "absolute_value": 11000120000.0,
+              "line": 2,
+              "value": 11000120000.0,
+              "timestamp": "2026-04-29T02:09:35.360Z",
+              "currency": "BMEx"
+            },
+            {
+              "absolute_value": 3215808985.0,
+              "line": 4,
+              "value": 3215808985.0,
+              "timestamp": "2026-07-19T12:35:00.504Z",
+              "currency": "XBt"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 3,
+              "value": 888237518.0,
+              "timestamp": "2026-05-30T00:01:00.000Z",
+              "currency": "USDt"
+            }
+          ],
+          "p99_absolute": 10844433779.7
+        },
+        "marginBalance": {
+          "count": 3,
+          "parse_failures": 0,
+          "min": 888237518.0,
+          "max": 11000120000.0,
+          "mean": 5089707224.0,
+          "top_absolute_values": [
+            {
+              "absolute_value": 11000120000.0,
+              "line": 2,
+              "value": 11000120000.0,
+              "timestamp": "2026-04-29T02:09:35.360Z",
+              "currency": "BMEx"
+            },
+            {
+              "absolute_value": 3380764154.0,
+              "line": 4,
+              "value": 3380764154.0,
+              "timestamp": "2026-07-19T12:35:00.504Z",
+              "currency": "XBt"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 3,
+              "value": 888237518.0,
+              "timestamp": "2026-05-30T00:01:00.000Z",
+              "currency": "USDt"
+            }
+          ],
+          "p99_absolute": 10847732883.08
+        },
+        "amount": {
+          "count": 3,
+          "parse_failures": 0,
+          "min": 888237518.0,
+          "max": 11000120000.0,
+          "mean": 5034722167.666667,
+          "top_absolute_values": [
+            {
+              "absolute_value": 11000120000.0,
+              "line": 2,
+              "value": 11000120000.0,
+              "timestamp": "2026-04-29T02:09:35.360Z",
+              "currency": "BMEx"
+            },
+            {
+              "absolute_value": 3215808985.0,
+              "line": 4,
+              "value": 3215808985.0,
+              "timestamp": "2026-07-19T12:35:00.504Z",
+              "currency": "XBt"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 3,
+              "value": 888237518.0,
+              "timestamp": "2026-05-30T00:01:00.000Z",
+              "currency": "USDt"
+            }
+          ],
+          "p99_absolute": 10844433779.7
+        },
+        "realisedPnl": {
+          "count": 3,
+          "parse_failures": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "top_absolute_values": [
+            {
+              "absolute_value": 0.0,
+              "line": 2,
+              "value": 0.0,
+              "timestamp": "2026-04-29T02:09:35.360Z",
+              "currency": "BMEx"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 3,
+              "value": 0.0,
+              "timestamp": "2026-05-30T00:01:00.000Z",
+              "currency": "USDt"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 4,
+              "value": 0.0,
+              "timestamp": "2026-07-19T12:35:00.504Z",
+              "currency": "XBt"
+            }
+          ],
+          "p99_absolute": 0.0
+        }
+      },
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-user-walletSummary.all.csv": {
+      "file": "api-v1-user-walletSummary.all.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 80,
+      "columns": [
+        "currency",
+        "transactType",
+        "symbol",
+        "amount",
+        "fee",
+        "walletBalance",
+        "marginBalance",
+        "pendingDebit",
+        "realisedPnl",
+        "unrealisedPnl"
+      ],
+      "missing_values": {
+        "symbol": {
+          "count": 14,
+          "ratio": 0.175
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {},
+      "primary_time_field": null,
+      "first_time": null,
+      "last_time": null,
+      "enumerations": {},
+      "numeric": {
+        "amount": {
+          "count": 80,
+          "parse_failures": 0,
+          "min": -7346000000.0,
+          "max": 18346120000.0,
+          "mean": 377604162.575,
+          "top_absolute_values": [
+            {
+              "absolute_value": 18346120000.0,
+              "line": 78,
+              "value": 18346120000.0,
+              "currency": "BMEx",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 11000120000.0,
+              "line": 75,
+              "value": 11000120000.0,
+              "currency": "BMEx",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 7346000000.0,
+              "line": 72,
+              "value": -7346000000.0,
+              "currency": "BMEx",
+              "transactType": "SpotTrade"
+            },
+            {
+              "absolute_value": 6600180000.0,
+              "line": 81,
+              "value": -6600180000.0,
+              "currency": "XBt",
+              "transactType": "Withdrawal"
+            },
+            {
+              "absolute_value": 4020464551.0,
+              "line": 66,
+              "value": 4020464551.0,
+              "symbol": "XBTUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 3785348582.0,
+              "line": 37,
+              "value": 3785348582.0,
+              "symbol": "ETHUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 3215808985.0,
+              "line": 77,
+              "value": 3215808985.0,
+              "currency": "XBt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 76,
+              "value": 888237518.0,
+              "currency": "USDt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 886389869.0,
+              "line": 79,
+              "value": 886389869.0,
+              "currency": "USDt",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 715082903.0,
+              "line": 19,
+              "value": -715082903.0,
+              "symbol": "DOTUSDT",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            }
+          ],
+          "p99_absolute": 12542780000.0
+        },
+        "fee": {
+          "count": 80,
+          "parse_failures": 0,
+          "min": -129849982.0,
+          "max": 81245821.0,
+          "mean": -1185552.375,
+          "top_absolute_values": [
+            {
+              "absolute_value": 129849982.0,
+              "line": 5,
+              "value": -129849982.0,
+              "currency": "XBt",
+              "transactType": "Funding"
+            },
+            {
+              "absolute_value": 81245821.0,
+              "line": 66,
+              "value": 81245821.0,
+              "symbol": "XBTUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 47422095.0,
+              "line": 77,
+              "value": -47422095.0,
+              "currency": "XBt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 934115.0,
+              "line": 17,
+              "value": 934115.0,
+              "symbol": "DOGEUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 180000.0,
+              "line": 81,
+              "value": 180000.0,
+              "currency": "XBt",
+              "transactType": "Withdrawal"
+            },
+            {
+              "absolute_value": 59521.0,
+              "line": 43,
+              "value": 59521.0,
+              "symbol": "ETHZ24",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 8430.0,
+              "line": 36,
+              "value": 8430.0,
+              "symbol": "ETHU24",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 78,
+              "value": 0.0,
+              "currency": "BMEx",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 79,
+              "value": 0.0,
+              "currency": "USDt",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 80,
+              "value": 0.0,
+              "currency": "XBt",
+              "transactType": "Transfer"
+            }
+          ],
+          "p99_absolute": 91452694.81
+        },
+        "walletBalance": {
+          "count": 80,
+          "parse_failures": 0,
+          "min": -7346000000.0,
+          "max": 18346120000.0,
+          "mean": 377604162.575,
+          "top_absolute_values": [
+            {
+              "absolute_value": 18346120000.0,
+              "line": 78,
+              "value": 18346120000.0,
+              "currency": "BMEx",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 11000120000.0,
+              "line": 75,
+              "value": 11000120000.0,
+              "currency": "BMEx",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 7346000000.0,
+              "line": 72,
+              "value": -7346000000.0,
+              "currency": "BMEx",
+              "transactType": "SpotTrade"
+            },
+            {
+              "absolute_value": 6600180000.0,
+              "line": 81,
+              "value": -6600180000.0,
+              "currency": "XBt",
+              "transactType": "Withdrawal"
+            },
+            {
+              "absolute_value": 4020464551.0,
+              "line": 66,
+              "value": 4020464551.0,
+              "symbol": "XBTUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 3785348582.0,
+              "line": 37,
+              "value": 3785348582.0,
+              "symbol": "ETHUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 3215808985.0,
+              "line": 77,
+              "value": 3215808985.0,
+              "currency": "XBt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 76,
+              "value": 888237518.0,
+              "currency": "USDt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 886389869.0,
+              "line": 79,
+              "value": 886389869.0,
+              "currency": "USDt",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 715082903.0,
+              "line": 19,
+              "value": -715082903.0,
+              "symbol": "DOTUSDT",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            }
+          ],
+          "p99_absolute": 12542780000.0
+        },
+        "marginBalance": {
+          "count": 80,
+          "parse_failures": 0,
+          "min": -7346000000.0,
+          "max": 18346120000.0,
+          "mean": 381728041.8,
+          "top_absolute_values": [
+            {
+              "absolute_value": 18346120000.0,
+              "line": 78,
+              "value": 18346120000.0,
+              "currency": "BMEx",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 11000120000.0,
+              "line": 75,
+              "value": 11000120000.0,
+              "currency": "BMEx",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 7346000000.0,
+              "line": 72,
+              "value": -7346000000.0,
+              "currency": "BMEx",
+              "transactType": "SpotTrade"
+            },
+            {
+              "absolute_value": 6600180000.0,
+              "line": 81,
+              "value": -6600180000.0,
+              "currency": "XBt",
+              "transactType": "Withdrawal"
+            },
+            {
+              "absolute_value": 4185419720.0,
+              "line": 66,
+              "value": 4185419720.0,
+              "symbol": "XBTUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 3785348582.0,
+              "line": 37,
+              "value": 3785348582.0,
+              "symbol": "ETHUSD",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            },
+            {
+              "absolute_value": 3380764154.0,
+              "line": 77,
+              "value": 3380764154.0,
+              "currency": "XBt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 888237518.0,
+              "line": 76,
+              "value": 888237518.0,
+              "currency": "USDt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 886389869.0,
+              "line": 79,
+              "value": 886389869.0,
+              "currency": "USDt",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 715082903.0,
+              "line": 19,
+              "value": -715082903.0,
+              "symbol": "DOTUSDT",
+              "currency": "XBt",
+              "transactType": "RealisedPNL"
+            }
+          ],
+          "p99_absolute": 12542780000.0
+        },
+        "realisedPnl": {
+          "count": 80,
+          "parse_failures": 0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "top_absolute_values": [
+            {
+              "absolute_value": 0.0,
+              "line": 72,
+              "value": 0.0,
+              "currency": "BMEx",
+              "transactType": "SpotTrade"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 73,
+              "value": 0.0,
+              "currency": "USDt",
+              "transactType": "SpotTrade"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 76,
+              "value": 0.0,
+              "currency": "USDt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 75,
+              "value": 0.0,
+              "currency": "BMEx",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 74,
+              "value": 0.0,
+              "currency": "XBt",
+              "transactType": "SpotTrade"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 79,
+              "value": 0.0,
+              "currency": "USDt",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 80,
+              "value": 0.0,
+              "currency": "XBt",
+              "transactType": "Transfer"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 77,
+              "value": 0.0,
+              "currency": "XBt",
+              "transactType": "Total"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 81,
+              "value": 0.0,
+              "currency": "XBt",
+              "transactType": "Withdrawal"
+            },
+            {
+              "absolute_value": 0.0,
+              "line": 78,
+              "value": 0.0,
+              "currency": "BMEx",
+              "transactType": "Transfer"
+            }
+          ],
+          "p99_absolute": 0.0
+        }
+      },
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-instrument.all.csv": {
+      "file": "api-v1-instrument.all.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 3090,
+      "columns": [
+        "symbol",
+        "state",
+        "typ",
+        "listing",
+        "expiry",
+        "settle",
+        "underlying",
+        "quoteCurrency",
+        "settlCurrency",
+        "isInverse",
+        "isQuanto",
+        "multiplier",
+        "underlyingToPositionMultiplier",
+        "underlyingToSettleMultiplier",
+        "quoteToSettleMultiplier",
+        "lotSize",
+        "tickSize",
+        "makerFee",
+        "takerFee",
+        "askPrice",
+        "bidPrice",
+        "calcInterval",
+        "capped",
+        "closingTimestamp",
+        "deleverage",
+        "fairBasis",
+        "fairBasisRate",
+        "fairMethod",
+        "fairPrice",
+        "foreignNotional24h",
+        "front",
+        "fundingBaseRate",
+        "fundingBaseSymbol",
+        "fundingInterval",
+        "fundingPremiumSymbol",
+        "fundingQuoteRate",
+        "fundingQuoteSymbol",
+        "fundingRate",
+        "fundingTimestamp",
+        "hasLiquidity",
+        "highPrice",
+        "homeNotional24h",
+        "impactAskPrice",
+        "impactBidPrice",
+        "impactMidPrice",
+        "indicativeFundingRate",
+        "indicativeSettlePrice",
+        "initMargin",
+        "instantPnl",
+        "instrumentID",
+        "lastChangePcnt",
+        "lastPrice",
+        "lastPriceProtected",
+        "lastTickDirection",
+        "limit",
+        "limitDownPrice",
+        "limitUpPrice",
+        "listedSettle",
+        "lowPrice",
+        "maintMargin",
+        "markMethod",
+        "markPrice",
+        "maxOrderQty",
+        "maxPrice",
+        "midPrice",
+        "minPrice",
+        "minTick",
+        "openInterest",
+        "openValue",
+        "openingTimestamp",
+        "pool",
+        "positionCurrency",
+        "prevClosePrice",
+        "prevPrice24h",
+        "prevTotalTurnover",
+        "prevTotalVolume",
+        "publishInterval",
+        "publishTime",
+        "rebalanceInterval",
+        "rebalanceTimestamp",
+        "reference",
+        "referenceSymbol",
+        "riskLimit",
+        "riskStep",
+        "rootSymbol",
+        "settledPrice",
+        "settledPriceAdjustmentRate",
+        "settlementFee",
+        "taxed",
+        "timestamp",
+        "totalTurnover",
+        "totalVolume",
+        "turnover",
+        "turnover24h",
+        "underlyingSymbol",
+        "volume",
+        "volume24h",
+        "vwap"
+      ],
+      "missing_values": {
+        "askPrice": {
+          "count": 2359,
+          "ratio": 0.7634304207119741
+        },
+        "bidPrice": {
+          "count": 2352,
+          "ratio": 0.7611650485436893
+        },
+        "calcInterval": {
+          "count": 2192,
+          "ratio": 0.7093851132686084
+        },
+        "closingTimestamp": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "expiry": {
+          "count": 2303,
+          "ratio": 0.7453074433656958
+        },
+        "fairBasis": {
+          "count": 2301,
+          "ratio": 0.7446601941747573
+        },
+        "fairBasisRate": {
+          "count": 2309,
+          "ratio": 0.7472491909385113
+        },
+        "fairMethod": {
+          "count": 2343,
+          "ratio": 0.7582524271844661
+        },
+        "fairPrice": {
+          "count": 2259,
+          "ratio": 0.7310679611650486
+        },
+        "foreignNotional24h": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "front": {
+          "count": 2243,
+          "ratio": 0.7258899676375404
+        },
+        "fundingBaseRate": {
+          "count": 2860,
+          "ratio": 0.9255663430420712
+        },
+        "fundingBaseSymbol": {
+          "count": 2765,
+          "ratio": 0.8948220064724919
+        },
+        "fundingInterval": {
+          "count": 2762,
+          "ratio": 0.8938511326860842
+        },
+        "fundingPremiumSymbol": {
+          "count": 2764,
+          "ratio": 0.8944983818770227
+        },
+        "fundingQuoteRate": {
+          "count": 2860,
+          "ratio": 0.9255663430420712
+        },
+        "fundingQuoteSymbol": {
+          "count": 2765,
+          "ratio": 0.8948220064724919
+        },
+        "fundingRate": {
+          "count": 2764,
+          "ratio": 0.8944983818770227
+        },
+        "fundingTimestamp": {
+          "count": 2762,
+          "ratio": 0.8938511326860842
+        },
+        "highPrice": {
+          "count": 2970,
+          "ratio": 0.9611650485436893
+        },
+        "homeNotional24h": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "impactAskPrice": {
+          "count": 2625,
+          "ratio": 0.8495145631067961
+        },
+        "impactBidPrice": {
+          "count": 2625,
+          "ratio": 0.8495145631067961
+        },
+        "impactMidPrice": {
+          "count": 2625,
+          "ratio": 0.8495145631067961
+        },
+        "indicativeFundingRate": {
+          "count": 2764,
+          "ratio": 0.8944983818770227
+        },
+        "indicativeSettlePrice": {
+          "count": 2272,
+          "ratio": 0.7352750809061489
+        },
+        "initMargin": {
+          "count": 2234,
+          "ratio": 0.7229773462783171
+        },
+        "lastChangePcnt": {
+          "count": 120,
+          "ratio": 0.038834951456310676
+        },
+        "lastPrice": {
+          "count": 66,
+          "ratio": 0.021359223300970873
+        },
+        "lastPriceProtected": {
+          "count": 2234,
+          "ratio": 0.7229773462783171
+        },
+        "lastTickDirection": {
+          "count": 1439,
+          "ratio": 0.4656957928802589
+        },
+        "limit": {
+          "count": 3034,
+          "ratio": 0.9818770226537217
+        },
+        "limitDownPrice": {
+          "count": 3017,
+          "ratio": 0.9763754045307443
+        },
+        "limitUpPrice": {
+          "count": 3017,
+          "ratio": 0.9763754045307443
+        },
+        "listedSettle": {
+          "count": 2578,
+          "ratio": 0.8343042071197411
+        },
+        "listing": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "lotSize": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "lowPrice": {
+          "count": 2970,
+          "ratio": 0.9611650485436893
+        },
+        "maintMargin": {
+          "count": 2234,
+          "ratio": 0.7229773462783171
+        },
+        "makerFee": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "markMethod": {
+          "count": 16,
+          "ratio": 0.005177993527508091
+        },
+        "markPrice": {
+          "count": 65,
+          "ratio": 0.021035598705501618
+        },
+        "maxOrderQty": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "maxPrice": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "midPrice": {
+          "count": 2358,
+          "ratio": 0.7631067961165049
+        },
+        "minTick": {
+          "count": 2261,
+          "ratio": 0.7317152103559871
+        },
+        "multiplier": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "openInterest": {
+          "count": 2168,
+          "ratio": 0.7016181229773463
+        },
+        "openValue": {
+          "count": 1460,
+          "ratio": 0.47249190938511326
+        },
+        "openingTimestamp": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "pool": {
+          "count": 2941,
+          "ratio": 0.9517799352750809
+        },
+        "positionCurrency": {
+          "count": 2453,
+          "ratio": 0.7938511326860841
+        },
+        "prevClosePrice": {
+          "count": 2233,
+          "ratio": 0.7226537216828479
+        },
+        "prevPrice24h": {
+          "count": 2264,
+          "ratio": 0.7326860841423948
+        },
+        "prevTotalTurnover": {
+          "count": 2215,
+          "ratio": 0.7168284789644013
+        },
+        "prevTotalVolume": {
+          "count": 2215,
+          "ratio": 0.7168284789644013
+        },
+        "publishInterval": {
+          "count": 880,
+          "ratio": 0.284789644012945
+        },
+        "publishTime": {
+          "count": 2197,
+          "ratio": 0.7110032362459547
+        },
+        "quoteToSettleMultiplier": {
+          "count": 2396,
+          "ratio": 0.7754045307443366
+        },
+        "rebalanceInterval": {
+          "count": 3082,
+          "ratio": 0.997411003236246
+        },
+        "rebalanceTimestamp": {
+          "count": 3082,
+          "ratio": 0.997411003236246
+        },
+        "reference": {
+          "count": 23,
+          "ratio": 0.00744336569579288
+        },
+        "referenceSymbol": {
+          "count": 31,
+          "ratio": 0.010032362459546926
+        },
+        "riskLimit": {
+          "count": 2274,
+          "ratio": 0.7359223300970874
+        },
+        "riskStep": {
+          "count": 2274,
+          "ratio": 0.7359223300970874
+        },
+        "settlCurrency": {
+          "count": 2247,
+          "ratio": 0.7271844660194174
+        },
+        "settle": {
+          "count": 2303,
+          "ratio": 0.7453074433656958
+        },
+        "settledPrice": {
+          "count": 2362,
+          "ratio": 0.7644012944983819
+        },
+        "settledPriceAdjustmentRate": {
+          "count": 3067,
+          "ratio": 0.9925566343042072
+        },
+        "settlementFee": {
+          "count": 2219,
+          "ratio": 0.7181229773462783
+        },
+        "takerFee": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "totalTurnover": {
+          "count": 2215,
+          "ratio": 0.7168284789644013
+        },
+        "totalVolume": {
+          "count": 2215,
+          "ratio": 0.7168284789644013
+        },
+        "turnover": {
+          "count": 2215,
+          "ratio": 0.7168284789644013
+        },
+        "turnover24h": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "underlyingSymbol": {
+          "count": 51,
+          "ratio": 0.01650485436893204
+        },
+        "underlyingToPositionMultiplier": {
+          "count": 2524,
+          "ratio": 0.8168284789644013
+        },
+        "underlyingToSettleMultiplier": {
+          "count": 2900,
+          "ratio": 0.9385113268608414
+        },
+        "volume": {
+          "count": 2215,
+          "ratio": 0.7168284789644013
+        },
+        "volume24h": {
+          "count": 2210,
+          "ratio": 0.7152103559870551
+        },
+        "vwap": {
+          "count": 3001,
+          "ratio": 0.9711974110032362
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {
+        "listing": {
+          "nonempty": 880,
+          "missing": 2210,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2014-11-21T20:00:00Z",
+          "last_time": "2200-02-01T00:00:00Z"
+        },
+        "expiry": {
+          "nonempty": 787,
+          "missing": 2303,
+          "parse_failures": 0,
+          "out_of_order_count": 222,
+          "first_time": "2014-11-21T20:00:00Z",
+          "last_time": "2027-03-26T12:00:00Z"
+        },
+        "settle": {
+          "nonempty": 787,
+          "missing": 2303,
+          "parse_failures": 0,
+          "out_of_order_count": 221,
+          "first_time": "2014-11-21T20:00:00Z",
+          "last_time": "2027-03-26T12:00:00Z"
+        },
+        "closingTimestamp": {
+          "nonempty": 880,
+          "missing": 2210,
+          "parse_failures": 0,
+          "out_of_order_count": 246,
+          "first_time": "2014-11-21T20:00:00Z",
+          "last_time": "2200-02-01T01:00:00Z"
+        },
+        "fundingTimestamp": {
+          "nonempty": 328,
+          "missing": 2762,
+          "parse_failures": 0,
+          "out_of_order_count": 102,
+          "first_time": "2016-11-04T12:00:00Z",
+          "last_time": "2026-07-19T20:00:00Z"
+        },
+        "openingTimestamp": {
+          "nonempty": 880,
+          "missing": 2210,
+          "parse_failures": 0,
+          "out_of_order_count": 246,
+          "first_time": "2014-11-21T20:00:00Z",
+          "last_time": "2200-02-01T00:00:00Z"
+        },
+        "publishTime": {
+          "nonempty": 893,
+          "missing": 2197,
+          "parse_failures": 0,
+          "out_of_order_count": 1,
+          "first_time": "2000-01-01T07:30:00Z",
+          "last_time": "2000-01-01T12:00:00Z"
+        },
+        "rebalanceTimestamp": {
+          "nonempty": 8,
+          "missing": 3082,
+          "parse_failures": 0,
+          "out_of_order_count": 3,
+          "first_time": "2016-06-24T12:00:00Z",
+          "last_time": "2016-09-30T12:00:00Z"
+        },
+        "timestamp": {
+          "nonempty": 3090,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 916,
+          "first_time": "2014-11-21T21:00:02.409Z",
+          "last_time": "2026-07-19T12:35:03.897Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2014-11-21T21:00:02.409Z",
+      "last_time": "2026-07-19T12:35:03.897Z",
+      "enumerations": {},
+      "numeric": {},
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "api-v1-wallet-assets.csv": {
+      "file": "api-v1-wallet-assets.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 52,
+      "columns": [
+        "currency",
+        "majorCurrency",
+        "name",
+        "currencyType",
+        "scale",
+        "enabled",
+        "isMarginCurrency",
+        "memoRequired",
+        "asset",
+        "networks",
+        "assetID",
+        "maxWithdrawalAmount",
+        "minDepositAmount",
+        "minWithdrawalAmount"
+      ],
+      "missing_values": {
+        "maxWithdrawalAmount": {
+          "count": 1,
+          "ratio": 0.019230769230769232
+        },
+        "minDepositAmount": {
+          "count": 1,
+          "ratio": 0.019230769230769232
+        },
+        "minWithdrawalAmount": {
+          "count": 1,
+          "ratio": 0.019230769230769232
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {},
+      "primary_time_field": null,
+      "first_time": null,
+      "last_time": null,
+      "enumerations": {},
+      "numeric": {},
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    },
+    "derived-equity-curve.csv": {
+      "file": "derived-equity-curve.csv",
+      "exists": true,
+      "status": "WARNING",
+      "rows": 17468,
+      "columns": [
+        "timestamp",
+        "transactTime",
+        "transactType",
+        "transactStatus",
+        "reference",
+        "eventCurrencies",
+        "walletBalanceXBT",
+        "usdtWalletBalanceUSDt",
+        "xbtUsdtRate",
+        "walletBalanceXBTEquivalent",
+        "marginBalanceXBT",
+        "marginBalanceXBTEquivalent",
+        "cumulativeCompletedDepositsAfterBaselineXBT",
+        "cumulativeCompletedWithdrawalsAfterBaselineXBT",
+        "adjustedWealthXBT",
+        "adjustedWealthMultipleVsBaseline",
+        "adjustedMarkedWealthXBT",
+        "adjustedMarkedMultipleVsBaseline",
+        "baselineBalanceXBT",
+        "baselineTimestamp",
+        "methodologyVersion"
+      ],
+      "missing_values": {
+        "adjustedMarkedMultipleVsBaseline": {
+          "count": 17467,
+          "ratio": 0.9999427524616441
+        },
+        "adjustedMarkedWealthXBT": {
+          "count": 17467,
+          "ratio": 0.9999427524616441
+        },
+        "marginBalanceXBT": {
+          "count": 17467,
+          "ratio": 0.9999427524616441
+        },
+        "marginBalanceXBTEquivalent": {
+          "count": 17467,
+          "ratio": 0.9999427524616441
+        },
+        "reference": {
+          "count": 1,
+          "ratio": 5.72475383558507e-05
+        },
+        "xbtUsdtRate": {
+          "count": 2537,
+          "ratio": 0.14523700480879323
+        }
+      },
+      "blank_rows": 0,
+      "duplicate_full_rows": 0,
+      "key_column": null,
+      "key_quality": null,
+      "time_fields": {
+        "timestamp": {
+          "nonempty": 17468,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2020-05-01T14:39:40.387Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "transactTime": {
+          "nonempty": 17468,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 5,
+          "first_time": "2020-05-01T14:39:40.387Z",
+          "last_time": "2026-07-19T12:35:02.029Z"
+        },
+        "baselineTimestamp": {
+          "nonempty": 17468,
+          "missing": 0,
+          "parse_failures": 0,
+          "out_of_order_count": 0,
+          "first_time": "2020-05-01T14:39:40.387Z",
+          "last_time": "2020-05-01T14:39:40.387Z"
+        }
+      },
+      "primary_time_field": "timestamp",
+      "first_time": "2020-05-01T14:39:40.387Z",
+      "last_time": "2026-07-19T12:35:02.029Z",
+      "enumerations": {},
+      "numeric": {},
+      "anomalies": {
+        "nonpositive_prices": {},
+        "negative_quantities": {},
+        "last_qty_greater_than_order_qty": 0,
+        "cum_qty_greater_than_order_qty": 0,
+        "negative_leaves_qty": 0,
+        "quantity_without_execution_price": 0,
+        "wallet_balance_jump_candidates": []
+      },
+      "reader_backend": "polars_batched_or_stdlib_fallback"
+    }
+  },
+  "associations": {
+    "execution_to_order": {
+      "execution_rows": 173434,
+      "execution_orderID_nonempty_rows": 160478,
+      "execution_orderID_missing_rows": 12956,
+      "execution_orderID_nonempty_ratio": 0.9252972312234049,
+      "unique_execution_orderIDs": 31717,
+      "unique_orderIDs": 43216,
+      "unique_execution_orderIDs_matched": 31716,
+      "unique_execution_orderIDs_unmatched": 1,
+      "unique_execution_orderID_match_ratio": 0.9999684711668821,
+      "matched_execution_orderID_rows": 160468,
+      "row_level_match_ratio": 0.9999376861625893,
+      "unmatched_examples": [
+        "18a1e0fe-da52-40eb-8e51-e2acbded0578"
+      ],
+      "note": "Unique-ID coverage is reported separately from row-level coverage because an execution orderID can appear on many fill rows.",
+      "execution_key_duplicate_rows": 0
+    }
+  },
+  "unit_context": {
+    "wallet_asset_scales": {
+      "MATIc": {
+        "scale": 8,
+        "majorCurrency": "MATIC",
+        "name": "Matic Token",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "TAXTRUMp": {
+        "scale": 8,
+        "majorCurrency": "TAXTRUMP",
+        "name": "MAGA (Taxed) Withdrawal Only",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "SHIb": {
+        "scale": 5,
+        "majorCurrency": "SHIB",
+        "name": "Shiba Inu",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "DOGe": {
+        "scale": 6,
+        "majorCurrency": "DOGE",
+        "name": "Dogecoin",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "USDt": {
+        "scale": 6,
+        "majorCurrency": "USDT",
+        "name": "USD Tether",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "true"
+      },
+      "NEAr": {
+        "scale": 8,
+        "majorCurrency": "NEAR",
+        "name": "NEAR Protocol",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "STLs": {
+        "scale": 8,
+        "majorCurrency": "STLS",
+        "name": "STELSI",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "MAMUSd": {
+        "scale": 6,
+        "majorCurrency": "MAMUSD",
+        "name": "Multi Asset Margin USD",
+        "currencyType": "Synthetic",
+        "isMarginCurrency": "false"
+      },
+      "XRp": {
+        "scale": 6,
+        "majorCurrency": "XRP",
+        "name": "XRP",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "TRx": {
+        "scale": 6,
+        "majorCurrency": "TRX",
+        "name": "Tron",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "BMEx": {
+        "scale": 6,
+        "majorCurrency": "BMEX",
+        "name": "BitMEX Token",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "SANd": {
+        "scale": 8,
+        "majorCurrency": "SAND",
+        "name": "Sand",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "BCh": {
+        "scale": 8,
+        "majorCurrency": "BCH",
+        "name": "Bitcoin Cash",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "DOt": {
+        "scale": 8,
+        "majorCurrency": "DOT",
+        "name": "Polkadot (Relay)",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "XBt": {
+        "scale": 8,
+        "majorCurrency": "XBT",
+        "name": "Bitcoin",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "true"
+      },
+      "POl": {
+        "scale": 9,
+        "majorCurrency": "POL",
+        "name": "POL (Polygon)",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "LOt": {
+        "scale": 5,
+        "majorCurrency": "LOT",
+        "name": "League of Traders",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "AVAx": {
+        "scale": 8,
+        "majorCurrency": "AVAX",
+        "name": "Avalanche (C-Chain)",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "USDe": {
+        "scale": 6,
+        "majorCurrency": "USDE",
+        "name": "Ethena USDe",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "GOAt": {
+        "scale": 8,
+        "majorCurrency": "GOAT",
+        "name": "Goatseus Maximus",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "LTc": {
+        "scale": 8,
+        "majorCurrency": "LTC",
+        "name": "Litecoin",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "USDc": {
+        "scale": 6,
+        "majorCurrency": "USDC",
+        "name": "USD Coin",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "TRUMp": {
+        "scale": 8,
+        "majorCurrency": "TRUMP",
+        "name": "MAGA (Taxless)",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "FTm": {
+        "scale": 8,
+        "majorCurrency": "FTM",
+        "name": "Fantom",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "CRo": {
+        "scale": 6,
+        "majorCurrency": "CRO",
+        "name": "Cronos",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "FTr": {
+        "scale": 5,
+        "majorCurrency": "FTR",
+        "name": "Fautor",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "FTt": {
+        "scale": 8,
+        "majorCurrency": "FTT",
+        "name": "FTX Token",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "KAMa": {
+        "scale": 5,
+        "majorCurrency": "KAMA",
+        "name": "Kamala Harris",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "RLUSd": {
+        "scale": 6,
+        "majorCurrency": "RLUSD",
+        "name": "Ripple USD",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "SUSHi": {
+        "scale": 8,
+        "majorCurrency": "SUSHI",
+        "name": "Sushi Token",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "ATOm": {
+        "scale": 6,
+        "majorCurrency": "ATOM",
+        "name": "Cosmos",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "UNi": {
+        "scale": 8,
+        "majorCurrency": "UNI",
+        "name": "Uniswap",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "AAVe": {
+        "scale": 8,
+        "majorCurrency": "AAVE",
+        "name": "Aave",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "WBTc": {
+        "scale": 8,
+        "majorCurrency": "WBTC",
+        "name": "Wrapped BTC",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "s": {
+        "scale": 8,
+        "majorCurrency": "S",
+        "name": "Sonic",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "BONk": {
+        "scale": 5,
+        "majorCurrency": "BONK",
+        "name": "Bonk",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "LINk": {
+        "scale": 8,
+        "majorCurrency": "LINK",
+        "name": "Chainlink",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "XTz": {
+        "scale": 8,
+        "majorCurrency": "XTZ",
+        "name": "Tezos",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "XAUt": {
+        "scale": 6,
+        "majorCurrency": "XAUT",
+        "name": "Tether Gold",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "MANa": {
+        "scale": 8,
+        "majorCurrency": "MANA",
+        "name": "Decentraland",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "HYPe": {
+        "scale": 8,
+        "majorCurrency": "HYPE",
+        "name": "Hyperliquid",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "GATa": {
+        "scale": 8,
+        "majorCurrency": "GATA",
+        "name": "Gata",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "OKb": {
+        "scale": 8,
+        "majorCurrency": "OKB",
+        "name": "OKB",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "DAi": {
+        "scale": 6,
+        "majorCurrency": "DAI",
+        "name": "Dai",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "LAMp": {
+        "scale": 9,
+        "majorCurrency": "SOL",
+        "name": "Solana",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "APe": {
+        "scale": 8,
+        "majorCurrency": "APE",
+        "name": "ApeCoin",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "BNb": {
+        "scale": 8,
+        "majorCurrency": "BNB",
+        "name": "Binance Coin (BSC)",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "Gwei": {
+        "scale": 9,
+        "majorCurrency": "ETH",
+        "name": "Ethereum",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "fjUSDt": {
+        "scale": 6,
+        "majorCurrency": "fjUSDT",
+        "name": "fija USDT",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "BUSd": {
+        "scale": 6,
+        "majorCurrency": "BUSD",
+        "name": "Binance USD",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "AXs": {
+        "scale": 8,
+        "majorCurrency": "AXS",
+        "name": "Axie Infinity Shard",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      },
+      "ADa": {
+        "scale": 8,
+        "majorCurrency": "ADA",
+        "name": "Cardano",
+        "currencyType": "Crypto",
+        "isMarginCurrency": "false"
+      }
+    },
+    "instrument_summary": {
+      "rows": 3090,
+      "unique_symbols": 3090,
+      "settlement_currencies": {
+        "<MISSING>": 2247,
+        "Gwei": 7,
+        "USDt": 333,
+        "XBt": 503
+      },
+      "isInverse": {
+        "false": 2962,
+        "true": 128
+      }
+    },
+    "raw_unit_risk": {
+      "wallet_fields": [
+        "amount",
+        "fee",
+        "walletBalance",
+        "marginBalance"
+      ],
+      "execution_fields": [
+        "execCost",
+        "execComm",
+        "realisedPnl",
+        "homeNotional",
+        "foreignNotional"
+      ],
+      "order_fields": [
+        "orderQty",
+        "cumQty",
+        "leavesQty",
+        "displayQty",
+        "price",
+        "avgPx",
+        "stopPx"
+      ],
+      "snapshot_fields": [
+        "amount",
+        "walletBalance",
+        "marginBalance",
+        "realisedPnl",
+        "unrealisedPnl",
+        "markValue"
+      ],
+      "interpretation": "Do not treat all numeric fields as BTC. Wallet ledger quantities use currency-specific asset scale; contract quantities are contracts; price/notional/PnL/fee fields require instrument, currency, and settlement metadata."
+    }
+  },
+  "readiness": {
+    "status": "READY_WITH_WARNINGS",
+    "blockers": [],
+    "caveats": [
+      "1 of 31717 unique execution orderIDs (0.0032%) do not match the order ledger; inspect before trusting order intent.",
+      "Exact duplicate rows exist in at least one table; they are reported, not removed.",
+      "Wallet, PnL, fee, notional, quantity, and price fields still require BitMEX unit normalization before PnL/equity reconstruction.",
+      "Wallet balance jump candidates require event-type and asset-scale interpretation; this audit does not auto-repair or explain them."
+    ]
+  },
+  "m0_02_suggestions": [
+    "Use execution timestamp as the event stream and retain transactTime as a secondary audit field.",
+    "Replay every Trade row in timestamp/order-preserving order; do not deduplicate repeated orderID lifecycle rows.",
+    "Join instrument metadata by symbol and apply currency-specific asset scales before aggregating PnL, fees, costs, and balances.",
+    "Use terminal position, wallet, and margin snapshots as reconciliation anchors after replay.",
+    "Investigate unmatched execution orderIDs and wallet balance jump candidates before treating intent or equity as complete."
+  ]
+}
