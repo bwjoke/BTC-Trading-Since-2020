@@ -1,0 +1,6 @@
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+plotly>=5.14.0
+ccxt>=4.0.0
+jupyter>=1.0.0
