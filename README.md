@@ -3,12 +3,14 @@
 >[English](README.md) | [中文](README.zh-CN.md)
 
 In the AI era, high-quality context becomes the most scarce asset.
-This repository is an open-intelligence experiment: a public, inspectable, and continuously extensible mirror of a real trading account. It spans nearly six years, 43k+ orders, and 173k+ execution rows.
-The internet likely has no comparable public repository that continuously exposes the full multi-year secondary-market history of a predominantly BTC-trading account at this level of detail.
+This repository is an open-intelligence experiment: a public, inspectable mirror of a real trading account since May 2020. This build contains 43,258 orders and 173,577 balance-affecting execution records, plus the available order-lifecycle events described below.
+A public, multi-year account ledger at this level of detail offers a way to examine predominantly BTC trading beyond screenshots and retrospective claims.
 
 **This archive is more about decision quality under uncertainty than prediction quality over price.**
 
-![Cumulative performance](cumulative-performance.png?v=f0634b4759b9)
+> **Final archive snapshot — 2026-09-11.** This is the final refresh requested by the account owner. Account ledgers use a common cutoff of **2026-09-11T09:43:29Z**; position, wallet, and margin snapshots were read sequentially afterward, not atomically. Activity after those reads is not included.
+
+![Cumulative performance](cumulative-performance.png?v=30f9af45aa64)
 
 BitMEX recognized Paul Wei ([`@coolish`](https://x.com/coolish)) as one of its 11th anniversary Legends and, on its public Hall of Legends page, highlighted a `70x` Bitcoin-trading return over 3 years ([source](https://www.bitmex.com/hall-of-legends)). But the deeper value of this repository is not a single headline number. It is a public, timestamped archive of long-term BTC trading through multiple market cycles — including strong calls, reversals, drawdowns, and recoveries — so readers can inspect the record in sequence rather than rely on retrospective storytelling.
 
@@ -18,7 +20,7 @@ Any long-term result includes timing and luck. What makes this archive unusual i
 
 Most public trading content is narrative without ledger truth.
 
-This repository does the opposite: it publishes a long-horizon, continuously updated historical mirror of one real trading account so other people can inspect the actual execution ledger, wallet ledger, terminal snapshots, and reconstruction anchors instead of relying on screenshots, selective anecdotes, or marketing summaries.
+This repository does the opposite: it publishes a long-horizon historical mirror of one real trading account so other people can inspect the actual execution ledger, wallet ledger, terminal snapshots, and reconstruction anchors instead of relying on screenshots, selective anecdotes, or marketing summaries.
 
 Open intelligence instead of selective narrative.
 
@@ -30,8 +32,9 @@ Read it instead as a timestamped archive of manual, discretionary, chart-driven 
 ## Dataset window
 
 - First public event in this dataset: **2020-05-01T01:05:55.004Z**
-- Latest public event/snapshot in this build: **2026-07-19T12:35:02.029Z**
-- Versioning policy: stable root filenames + daily Git commit/tag (`data-2026-07-19` is the tag format)
+- Latest recorded account event/snapshot timestamp: **2026-07-23T12:56:05.357Z**
+- Versioning policy: stable root filenames + Git commit/tag (`data-YYYY-MM-DD`, dated by export, not the last account event)
+- Export completed (UTC): **2026-09-11T09:57:16Z**. Export time and last recorded account event time are different.
 
 ## Download packages
 
@@ -42,8 +45,9 @@ Read it instead as a timestamped archive of manual, discretionary, chart-driven 
 
 | File | Source endpoint | Role |
 |---|---|---|
+| `api-v1-execution.csv` | `/api/v1/execution` | API-returned execution events, including available order lifecycle changes; not a guaranteed complete historical lifecycle log |
 | `api-v1-execution-tradeHistory.csv` | `/api/v1/execution/tradeHistory` | primary execution ledger |
-| `api-v1-order.csv` | `/api/v1/order` | order intent and lifecycle ledger |
+| `api-v1-order.csv` | `/api/v1/order` | order intent and latest returned state per order; timestamp-cursor export |
 | `api-v1-user-walletHistory.csv` | `/api/v1/user/walletHistory?currency=all` | wallet event ledger across deposits, withdrawals, funding, realised pnl, spot trades, conversions |
 | `api-v1-position.snapshot.csv` | `/api/v1/position` | terminal position anchor |
 | `api-v1-user-wallet.snapshot-all.csv` | `/api/v1/user/wallet?currency=all` | terminal wallet anchor |
@@ -57,17 +61,18 @@ Read it instead as a timestamped archive of manual, discretionary, chart-driven 
 
 ## High-level facts from this build
 
-- `api-v1-order.csv`: **43,251** rows
-- `api-v1-execution-tradeHistory.csv`: **173,434** rows
-- `api-v1-user-walletHistory.csv`: **17,484** rows
-- Time span: **2020-05-01 → 2026-07-19**
+- `api-v1-execution.csv`: **173,592** rows (all execution events returned by the API for this export)
+- `api-v1-order.csv`: **43,258** rows
+- `api-v1-execution-tradeHistory.csv`: **173,577** rows
+- `api-v1-user-walletHistory.csv`: **17,620** rows
+- Time span: **2020-05-01 → 2026-07-23**
 - By executed trade notional, BTC-related symbols account for **~84.0%** of the full archive
-- The account becomes much more BTC-concentrated in later years: **~93.7%** from 2022 onward, **~96.1%** from 2023 onward, and **~99.0%** from 2024 onward
+- The account becomes much more BTC-concentrated in later years: **~93.8%** from 2022 onward, **~96.1%** from 2023 onward, and **~99.0%** from 2024 onward
 - Chart baseline: **1.83953943 XBT** at **2020-05-01T14:39:40.387Z**
 - Total completed deposits in XBT ledger: **1.77199051 XBT**
-- Total completed withdrawals in XBT ledger: **66.00180000 XBT**
-- Latest adjusted wallet-equivalent wealth (XBT+USDt scope): **98.13610009 XBT** (**53.348191x** vs baseline)
-- Latest adjusted marked wealth (XBT+USDt scope): **99.78565178 XBT** (**54.244911x** vs baseline)
+- Total completed withdrawals in XBT ledger: **99.51625171 XBT**
+- Latest adjusted wallet-equivalent wealth (XBT+USDt scope): **99.46454272 XBT** (**54.070351x** vs baseline)
+- Latest adjusted marked wealth (XBT+USDt scope): **n/a — not calculated from this snapshot**
 
 In plain English: **adjusted wealth** is the wallet-equivalent curve after stripping out later external deposits and adding back later external withdrawals, so it is closer to the trading result itself. **Marked-to-market wealth** uses the same framework but swaps in the current marked margin balance, so it also reflects unrealized PnL still sitting in open positions.
 
@@ -82,10 +87,26 @@ In plain English: **adjusted wealth** is the wallet-equivalent curve after strip
 For a community-created real-time dashboard showing this account's live positions and order data, see: **https://wsnb.online**
 This repository is the long-horizon historical layer; `wsnb.online` is the live current-state layer.
 
+## Order export integrity
+
+This final export uses **timestamp-cursor pagination**, keeping equal-timestamp groups together, and verifies that every `orderID` is unique. This corrects duplicate and omitted orders caused by unstable ordering across offset-page boundaries in earlier snapshots. Some order-file diffs therefore recover older records rather than represent new trading activity.
+
+## Execution lifecycle coverage — read before using
+
+`api-v1-execution.csv` now publishes the records returned by [`GET /api/v1/execution`](https://docs.bitmex.com/api-explorer/get-execution). The endpoint is documented to include order opening, cancellation, and order-status changes, in addition to balance-affecting events. That describes its event types, not a promise of complete historical retention.
+
+- Observed `execType` counts in this export: `Funding`: 12,916, `New`: 8, `Replaced`: 6, `Settlement`: 19, `Trade`: 160,642, `TriggeredOrActivatedBySystem`: 1.
+- Events other than `Trade`, `Funding`, and `Settlement`: **15**; their observed timestamp range is **2025-06-13T00:17:51.654Z → 2025-06-19T21:24:46.794Z**.
+- Returned `Canceled` events: **0**; returned `Rejected` events: **0**. An absent event is not evidence that the corresponding action never occurred.
+- This is **not a complete historical order lifecycle log**. The export preserves what the API returned; it does not fabricate missing New/Canceled/Replaced/Rejected events or infer their timestamps from order snapshots. Date filters do not establish historical completeness.
+- Join `execution` to `order` using native `orderID`; identify individual execution events using `execID`. `order.csv` preserves the states returned for individual orders, not every intervening state transition. Use a **left join** and retain unmatched execution rows: even a nonempty `orderID` may have no corresponding order record returned by the API.
+- **Do not concatenate** `execution` and `tradeHistory` for PnL or volume totals: they overlap. Continue using `tradeHistory` as the balance-affecting execution ledger, or explicitly deduplicate by `execID` when combining sources.
+
 ## How to read the files
 
+- `execution` adds all API-returned execution events, including the available lifecycle changes; see the coverage limits above.
 - `tradeHistory` is the main balance-affecting execution ledger.
-- `order` explains order intent, status transitions, and lifecycle state.
+- `order` records order intent and the latest state returned for each order; it is not a complete state-transition log.
 - `walletHistory` is the wallet-side ledger for deposits, withdrawals, funding, realised PnL, spot trades, conversions, and related events.
 - `position` / `wallet` / `margin` snapshots are terminal anchors for reconstructing state at the export time.
 - `instrument` and `wallet-assets` are reference dictionaries so downstream users can interpret symbols, scales, settlement currencies, and contract metadata using BitMEX-native semantics.
@@ -97,7 +118,9 @@ This repository is the long-horizon historical layer; `wsnb.online` is the live 
 - `api-v1-user-walletHistory.csv`: `tx` is removed, `text` is removed, and `address` is redacted only when `transactType` is `Withdrawal` or `Transfer`.
 - `api-v1-order.csv`: `text` is removed.
 - `api-v1-execution-tradeHistory.csv`: `text` is intentionally kept because it helps explain fills, funding, and settlements, but non-BitMEX hostnames inside that field are redacted.
-- `/api/v1/user` profile data and `/api/v1/execution` raw lifecycle noise are not published.
+- `api-v1-execution.csv`: all returned events are retained, but `account`, client/broker identifiers (`origClOrdID`, `clOrdID`, `clOrdLinkID`, `brokerLinkID`), and free-form fields (`text`, `ordRejReason`, `error`, `algoOrderDetails`) are excluded. Only explicitly reviewed columns are published.
+- Native exchange `orderID` and `execID` remain unchanged for cross-file joins; no client-provided IDs are needed for those joins.
+- `/api/v1/user` profile data and API credentials are never published.
 
 ## Derived performance methodology
 
@@ -119,13 +142,13 @@ This keeps the methodology auditable from the published files themselves while a
 
 - Raw API secrets
 - `/api/v1/user` profile payloads
-- `/api/v1/execution` rows that are only lifecycle noise beyond `tradeHistory`
+- Client-supplied order identifiers and unreviewed execution free-text fields
 - login/IP/device/profile data
 - chain tx hashes from wallet history
 
 ## Update policy
 
-This repository is designed for recurring refreshes.
+This release is the final archive refresh requested by the account owner; no further routine refreshes are planned. It is a dated snapshot, not a claim to include future account activity. The reproducible update procedure is retained below for auditability.
 
 Each update should:
 
